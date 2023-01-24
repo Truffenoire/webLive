@@ -1,0 +1,44 @@
+footer{
+    background-color: $color-1;
+    height: 500px;
+    // transform: translateY(-91px);
+    overflow: hidden;
+    h1{
+        padding: 5rem;
+        text-align: center;
+        font-size: 8rem;
+    }
+    .contain{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        .contact{
+            grid-column: 2;
+        }
+        .mention{
+            grid-column: 4;
+            text-align: center;
+        }
+    }
+    .reseau{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        h3{
+            grid-column: 4;
+            text-align: center;
+        }
+        .iconReseau{
+            display: flex;
+            justify-content: center;
+            gap: 5%;
+            list-style-type: none;
+            grid-column: 4;
+            text-align: center;
+            li{
+                a{
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+        }
+    }
+}
