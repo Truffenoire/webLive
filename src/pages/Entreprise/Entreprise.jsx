@@ -11,13 +11,13 @@ export default function Entreprise() {
 
     useEffect(() => {
         gsap.timeline().to('.txtAnim', {
-            height: 200,
-            duration: 0.4,
+            y: 0,
+            duration: 0.3,
             stagger: 0.1,
             scrollTrigger: {
                 trigger: ".listAnim",
                 // markers: true,
-                start: "top 600px",
+                start: "top 700px",
                 end: "bottom 300px",
                 scrub: true
             }
@@ -25,13 +25,13 @@ export default function Entreprise() {
     }, [])
     useEffect(() => {
         gsap.timeline().to('.txt2Anim', {
-            height: 200,
-            duration: 0.4,
+            y: 0,
+            duration: 0.3,
             stagger: 0.1,
             scrollTrigger: {
                 trigger: ".persAnim",
                 // markers: true,
-                start: "top 600px",
+                start: "top 700px",
                 end: "bottom 300px",
                 scrub: true
             }
@@ -39,14 +39,29 @@ export default function Entreprise() {
     }, [])
     useEffect(() => {
         gsap.timeline().to('.txt3Anim', {
-            height: 200,
-            duration: 0.4,
+            y: 0,
+            duration: 0.3,
             stagger: 0.1,
             scrollTrigger: {
                 trigger: ".adAnim",
                 // markers: true,
-                start: "top 600px",
+                start: "top 700px",
                 end: "bottom 300px",
+                scrub: true
+            }
+        })
+    }, [])
+    // animation li bas de page
+    useEffect(() => {
+        gsap.timeline().to('.toBottom li', {
+            y: 0,
+            duration: 0.2,
+            stagger: 0.2,
+            scrollTrigger: {
+                trigger: ".find",
+                // markers: true,
+                start: "top 600px",
+                end: "bottom 500px",
                 scrub: true
             }
         })
@@ -136,6 +151,23 @@ export default function Entreprise() {
                     <li className='li3Anim'><span className='txt3Anim'>Transcription écrite des audio (compte rendu, courriers)</span></li>
                     <li className='li3Anim'><span className='txt3Anim'>Gestion pré-comptable</span></li>
                 </ul>
+            </div>
+            <div className="gestion">
+                <span className='spanGestion'>Organisation</span>
+                <span className='spanGestion grow'>Organisation</span>
+                <span className='spanGestion'>Organisation</span>
+                <span className='spanGestion grow'>Organisation</span>
+                <span className='spanGestion'>Organisation</span>
+                <span className='spanGestion grow'>Organisation</span>
+                <span className='spanGestion'>Organisation</span>
+                <span className='spanGestion grow'>Organisation</span>
+            </div>
+            <div className='find'>
+                <ul className='toBottom'>
+                    <li>Bien classé</li>
+                    <li>Bien trouvé</li>
+                </ul>
+                <h2>Sur votre bureau ou sur votre ordi</h2>
             </div>
         </div>
     )
