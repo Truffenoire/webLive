@@ -77,8 +77,8 @@ export default function NavBar() {
 
               <div id={`${showSousMenu && "growUp" }`}>
                 <ul>
-                  <li><Link>Entreprises</Link></li>
-                  <li><Link>Particuliers</Link></li>
+                  <li onClick={handleShowMenu}><Link to={'/entreprise#ancre'}>Entreprises</Link></li>
+                  <li onClick={handleShowMenu}><Link to={'/particulier#ancre'}>Particuliers</Link></li>
                 </ul>
               </div>
               

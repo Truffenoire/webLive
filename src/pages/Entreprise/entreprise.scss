@@ -1,0 +1,101 @@
+.entreprise{
+    // color: red;
+    .gestionEtsList{
+        .title{
+            font-size: 24rem;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        ul{
+            text-align: center;
+            font-size: 5rem;
+            .liAnim{
+                // opacity: 0;
+                overflow: hidden;
+                white-space: nowrap;
+                height: 150px;
+                // border: 1px solid black;
+                span{
+                    display: block;
+                    overflow: hidden;
+                    height: 0;
+                }
+            }
+        }
+    }
+    .gestionPersList{
+        .title{
+            font-size: 24rem;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        ul{
+            text-align: center;
+            font-size: 4.5rem;
+            .li2Anim{
+                // opacity: 0;
+                overflow: hidden;
+                white-space: nowrap;
+                height: 150px;
+                // border: 1px solid black;
+                span{
+                    display: block;
+                    overflow: hidden;
+                    height: 0;
+                }
+            }
+        }
+    }
+    .gestionAdList{
+        .title{
+            font-size: 18rem;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        ul{
+            text-align: center;
+            font-size: 4.5rem;
+            .li3Anim{
+                // opacity: 0;
+                overflow: hidden;
+                white-space: nowrap;
+                height: 150px;
+                // border: 1px solid black;
+                span{
+                    display: block;
+                    overflow: hidden;
+                    height: 0;
+                }
+            }
+        }
+    }
+    .gestion {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        font-weight: bold;
+        height: 70px;
+        overflow: hidden;
+        white-space: nowrap;
+        .spanGestion {
+            // color: white;
+            flex-grow: 1;
+            text-transform: uppercase;
+            white-space: nowrap;
+            font-size: 5rem;
+            padding: 2rem;
+            animation: translateXText 2s linear infinite;
+        }
+
+    }
+}
+
+@keyframes translateXText {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
