@@ -5,7 +5,7 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 
-import WhatsAppImg from '../../imgImport/WhatsAppButtonGreenLarge.svg'
+// import WhatsAppImg from '../../imgImport/WhatsAppButtonGreenLarge.svg'
 import BureauEmail from '../../imgImport/email-collage-counter.png'
 import Lettre from '../../imgImport/lettre.png'
 import Letter from '../../imgImport/letter.png'
@@ -16,7 +16,7 @@ import Cacheté from '../../imgImport/lettreCachet.png'
 
 
 
-gsap.registerPlugin(ScrollToPlugin, ScrollTrigger)
+// gsap.registerPlugin(ScrollToPlugin, ScrollTrigger)
 
 
 export default function Contact() {
@@ -44,7 +44,7 @@ export default function Contact() {
                 console.log(error.text);
             });
     };
-// Animation Scroll ---
+    // Animation Scroll ---
     const timbreRef = useRef(null)
     const timbre2Ref = useRef(null)
     const letterRef = useRef(null)
@@ -56,6 +56,7 @@ export default function Contact() {
     useEffect(() => {
         gsap.to('.enveloppe', {
             y: -1200,
+            x: 300,
             rotateZ: ('-180deg'),
             duration: 10,
             scrollTrigger: {
@@ -97,7 +98,7 @@ export default function Contact() {
     }, [])
     useEffect(() => {
         gsap.to('.letter', {
-            y: -1000,
+            y: -800,
             rotateZ: ('-180deg'),
             duration: 10,
             scrollTrigger: {
@@ -111,7 +112,7 @@ export default function Contact() {
     }, [])
     useEffect(() => {
         gsap.to('.timbre', {
-            y: -800,
+            x: 800,
             rotateZ: ('-180deg'),
             duration: 10,
             scrollTrigger: {
@@ -151,7 +152,20 @@ export default function Contact() {
             }
         })
     }, [])
-// ---
+    useEffect(() => {
+        gsap.to('.formulaire', {
+            x: 0,
+            duration: 15,
+            scrollTrigger: {
+                trigger: ".formulaire",
+                // markers: true,
+                start: "top bottom",
+                end: "top 250px",
+                scrub: true
+            }
+        })
+    }, [])
+    // ---
 
 
     return (
@@ -166,7 +180,7 @@ export default function Contact() {
             <div className="wave">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="calque_1" x="0px"
                     y="0px" viewBox="0 0 1300 550" xmlSpace="preserve">
-                    
+
                     {/* <circle id='path1' x="0" y="0" cx="100" cy="250" r="17.64" fill="blue" /> */}
 
                     <path className="st1" d="M 0 250 C 600 450 650 100 1300 250 L 1300 550 L 0 550 L 0 250">
@@ -192,9 +206,10 @@ export default function Contact() {
                     </path>
 
                 </svg>
-                <h1>Une question, un projet ou besoin d'une secretaire indépendante au plus vite ?</h1>
+                <h1>Une <span>question</span>, un <span>projet</span> ou <span>besoin</span> d'une <span>secretaire indépendante</span> au plus vite ?</h1>
                 <div className='whatsContact'>
                     <div className="containTxt">
+                        <div className="call">Passez votre <span>commande</span></div>
                         <div className='mail'>secretariatlive13@gmail.com</div>
                         <div className='numberTel'>07.60.17.85.07</div>
 
@@ -212,29 +227,21 @@ export default function Contact() {
                 <img className='secretaire' src={BureauEmail} alt="" />
             </div>
             <div id='ancreContact' className="contactTxt">
-                <span className='spanTxt'>CONTACTEZ-MOI</span>
-                <span className='spanTxt'>CONTACTEZ-MOI</span>
-                <span className='spanTxt'>CONTACTEZ-MOI</span>
-                <span className='spanTxt'>CONTACTEZ-MOI</span>
-                <span className='spanTxt'>CONTACTEZ-MOI</span>
-                <span className='spanTxt'>CONTACTEZ-MOI</span>
-                <span className='spanTxt'>CONTACTEZ-MOI</span>
-                <span className='spanTxt'>CONTACTEZ-MOI</span>
-                <span className='spanTxt'>CONTACTEZ-MOI</span>
-                <span className='spanTxt'>CONTACTEZ-MOI</span>
+                <span className='spanTxt'>CONTACTEZ-MOI - CONTACTEZ-MOI - CONTACTEZ-MOI - CONTACTEZ-MOI - CONTACTEZ-MOI&nbsp;</span>
+                <span className='spanTxt'>CONTACTEZ-MOI - CONTACTEZ-MOI - CONTACTEZ-MOI - CONTACTEZ-MOI - CONTACTEZ-MOI&nbsp;</span>
             </div>
             {/* chat WHATSAPP mais pas le bot */}
-            <a aria-label="Chat on WhatsApp" href="https://wa.me/+33760178507"> <img alt="Chat on WhatsApp" src={WhatsAppImg} /> </a>
+            {/* <a aria-label="Chat on WhatsApp" href="https://wa.me/+33760178507"> <img alt="Chat on WhatsApp" src={WhatsAppImg} /> </a> */}
             {/* WHATSAPP */}
-            <div  className="containForm">
+            <div className="containForm">
                 <form className="formulaire" ref={form} onSubmit={handleSubmit(sendEmail)}>
                     {isSended && (<small className='smallSubmit'>Merci pour votre message, nous vous repondrons très vite.</small>)}
-                    <label htmlFor="name">Nom<span className='etoile'>*</span></label>
+                    <label htmlFor="name">Nom <span className='etoile'>*</span></label>
                     <input name='user_name' htmlFor='name' placeholder='Nom' type="text" required
                         {...register('user_name', {
                             required: true
                         })} />
-                    <label htmlFor="E-mail">E-mail<span className='etoile'>*</span></label>
+                    <label htmlFor="E-mail">E-mail <span className='etoile'>*</span></label>
                     <input name='user_email' htmlFor="E-mail" placeholder='E-mail' type="text" required
                         {...register('user_email', {
                             required: true
@@ -251,16 +258,8 @@ export default function Contact() {
 
             </div>
             <div className="contactTxt">
-                <span className='spanTxt'>CONTACTEZ-MOI</span>
-                <span className='spanTxt'>CONTACTEZ-MOI</span>
-                <span className='spanTxt'>CONTACTEZ-MOI</span>
-                <span className='spanTxt'>CONTACTEZ-MOI</span>
-                <span className='spanTxt'>CONTACTEZ-MOI</span>
-                <span className='spanTxt'>CONTACTEZ-MOI</span>
-                <span className='spanTxt'>CONTACTEZ-MOI</span>
-                <span className='spanTxt'>CONTACTEZ-MOI</span>
-                <span className='spanTxt'>CONTACTEZ-MOI</span>
-                <span className='spanTxt'>CONTACTEZ-MOI</span>
+                <span className='spanTxt'>CONTACTEZ-MOI - CONTACTEZ-MOI - CONTACTEZ-MOI - CONTACTEZ-MOI - CONTACTEZ-MOI&nbsp;</span>
+                <span className='spanTxt'>CONTACTEZ-MOI - CONTACTEZ-MOI - CONTACTEZ-MOI - CONTACTEZ-MOI - CONTACTEZ-MOI&nbsp;</span>
             </div>
         </div>
     )

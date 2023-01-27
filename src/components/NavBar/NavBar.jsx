@@ -7,7 +7,7 @@ import { HashLink as Link } from 'react-router-hash-link';
 import { AiFillCloseCircle } from "react-icons/ai";
 import Logo from '../../imgImport/logoPetit.png'
 
-export default function NavBar() {
+export default function NavBar( {isCharged, setIsCharged}) {
 
   const ref = useRef(null)
 
@@ -40,6 +40,7 @@ export default function NavBar() {
     setHideMenu(!hideMenu)
     setShowMenu(!showMenu)
     setShowSousMenu(false)
+    setIsCharged(!isCharged)
     // gsap.to(ref.current, {duration:0.3, opacity:1, scale:1, color: '#0a0affa6'})
 
 

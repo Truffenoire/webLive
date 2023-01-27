@@ -18,12 +18,14 @@
         letter-spacing: -5px;
         z-index: 1000;
         font-size: 50px;
-        color: $color-1_1;
+        color: $color-6;
         outline: none;
         background-color: transparent;
         border: none;
         text-decoration: underline;
         font-family: 'Open Sans';
+        text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+
 
         &:hover {
             animation: scaleUp 0.4s ease-in-out both;
@@ -36,7 +38,7 @@
         align-items: center;
         height: 100vh;
         width: 100%;
-        background-color: #424B54;
+        background-color: $color-4;
         position: fixed;
         top: 50%;
         transform: translate(-50%, -50%);
@@ -47,7 +49,7 @@
             // position: fixed;
             height: 80%;
             width: 80%;
-            background-color: #EBCFB2;
+            background-color: $color-3;
             display: flex;
             // flex-direction: column;
             gap: 20px;
@@ -80,7 +82,7 @@
                         display: flex;
                         flex-direction: column;
                         align-items: center;
-                        background-color: $color-1_1;
+                        background-color: $color-4;
                         position: absolute;
                         width: 50%;
                         left: 30%;
@@ -100,7 +102,7 @@
                     }
 
                     a {
-                        color: $color-2;
+                        color: $color-1;
                         font-family: 'Kanit';
                         font-weight: 800;
                         font-size: 5rem;
@@ -146,7 +148,7 @@
             .closeMenu {
                 cursor: pointer;
                 font-size: 80px;
-                color: black;
+                color: $color-1;
                 height: 80px;
                 outline: none;
                 background-color: transparent;
@@ -171,7 +173,7 @@
     100% {
         -webkit-transform: scale(1.2);
         transform: scale(1.2);
-        color: $color-1_1;
+        color: $color-4;
     }
 }
 
