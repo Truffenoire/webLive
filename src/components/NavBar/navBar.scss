@@ -10,6 +10,38 @@
         margin: 10px;
     }
 
+    .headerContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 250px;
+
+        ul {
+            display: flex;
+            list-style-type: none;
+            gap: 150px;
+            font-size: 2rem;
+            color: white;
+
+            #contentWord {
+                width: 130px;
+                text-align: center;
+                animation: apparition 2s ease-in-out infinite;
+
+                &::after {
+                    content: '';
+                    animation: changeWord 10s linear infinite 1s;
+                }
+            }
+
+            .animate {
+                width: 50px;
+                height: 50px;
+            }
+
+        }
+    }
+
     .btnMenu {
         position: fixed;
         cursor: pointer;
@@ -186,6 +218,7 @@
         transform: rotate(180deg);
     }
 }
+
 @keyframes growToAll {
     0% {
         width: 0;
@@ -195,5 +228,48 @@
     100% {
         opacity: 1;
         width: 800px;
+    }
+}
+
+@keyframes changeWord {
+    0% {
+        content: 'Local';
+    }
+
+    20% {
+        content: 'Proche';
+    }
+
+    40% {
+        content: 'Competente';
+    }
+
+    60% {
+        content: 'Abordable';
+    }
+
+    80% {
+        content: 'Rapide';
+    }
+
+    100% {
+        content: 'Efficace';
+    }
+}
+
+@keyframes apparition {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    20% {
+        transform: translateY(1px);
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
     }
 }

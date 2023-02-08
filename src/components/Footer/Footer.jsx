@@ -35,8 +35,8 @@ function Footer({isCharged, setIsCharged}) {
         })
     },[isCharged])
 
-    console.log('isCharged',isCharged);
-    console.log('h1ref',h1Ref);
+    // console.log('isCharged',isCharged);
+    // console.log('h1ref',h1Ref);
 
     return (
         <footer className='footerAnim'>
