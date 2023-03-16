@@ -51,17 +51,16 @@ export default function Particulier() {
 }, [])
 
 useEffect(() => {
-  gsap.to('.service .title', {
-      x: 0,
-      duration: 0.2,
-      stagger: 0,
-      // scrollTrigger: {
-      //     trigger: ".titleAnim2",
-      //     // markers: true,
-      //     start: "top 600px",
-      //     end: "bottom 500px",
-      //     scrub: true
-      // }
+  gsap.to('.title', {
+      x: 800,
+      duration: 0.5,
+      scrollTrigger: {
+          trigger: ".title",
+          // markers: true,
+          start: "top 100%",
+          end: "bottom 100%",
+          scrub: true
+      }
   })
 }, [])
 

@@ -3,7 +3,9 @@
 .navBarContainer {
     display: flex;
     justify-content: center;
+    height: 75vh;
     background-color: $color-1;
+    z-index: 10;
 
     .logoContainer img {
         width: 170px;
@@ -13,8 +15,10 @@
     .headerContainer {
         display: flex;
         align-items: center;
+        flex-direction: column;
         justify-content: center;
-        height: 250px;
+        z-index: 10;
+
 
         ul {
             display: flex;
@@ -30,7 +34,7 @@
 
                 &::after {
                     content: '';
-                    animation: changeWord 10s linear infinite 1s;
+                    animation: changeWord 10s linear infinite alternate 1s;
                 }
             }
 

@@ -1,5 +1,6 @@
-import React, {useEffect, useRef} from 'react'
+import React, { useEffect, useRef } from 'react'
 import { HashLink as Link } from 'react-router-hash-link';
+import { useLocation } from 'react-router-dom';
 
 import { gsap } from "gsap"
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -10,13 +11,14 @@ import { RiMailSendLine } from "react-icons/ri";
 
 
 
-function Footer({isCharged, setIsCharged}) {
+function Footer({ isCharged, setIsCharged }) {
 
 
     const handleClik = () => {
         setIsCharged(!isCharged)
         console.log(isCharged);
     }
+    const location = useLocation()
     const h1Ref = useRef(null)
 
     useEffect(() => {
@@ -28,15 +30,34 @@ function Footer({isCharged, setIsCharged}) {
             scrollTrigger: {
                 trigger: "footer",
                 // markers: true,
-                start: "top 600px",
-                end: "bottom bottom",
+                start: "top 90%",
+                end: "bottom 100%",
                 scrub: true
             }
         })
-    },[isCharged])
+    },[isCharged, location.pathname])
 
-    // console.log('isCharged',isCharged);
-    // console.log('h1ref',h1Ref);
+    // useEffect(() => {
+    //     const element = h1Ref.current.children || document.querySelectorAll('.h1Anim span');
+    //     const tl = gsap.timeline({
+    //         scrollTrigger: {
+    //             trigger: '.footerAnim',
+    //             start: "top 90%",
+    //             end: "bottom 100%",
+    //             scrub: true,
+    //         },
+    //     });
+    //     tl.to(element, {
+    //         y: 0,
+    //         color: '#a6cfd5',
+    //         duration: 0.8,
+    //         stagger: 0.3,
+    //     });
+    //     console.log(element);
+    // }, [location.pathname, isCharged]);
+  
+    
+
 
     return (
         <footer className='footerAnim'>
@@ -64,7 +85,7 @@ function Footer({isCharged, setIsCharged}) {
                     <li>13720 Belcodéne</li>
                 </ul>
                 <div className="mention">
-                    Mentions légales <br/>
+                    Mentions légales <br />
                     CGV et RGPD
                 </div>
             </div>

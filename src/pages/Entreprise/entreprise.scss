@@ -17,8 +17,13 @@
 
         .title {
             font-size: 21.3rem;
-            -webkit-text-stroke: 2px $color-3;
-            text-shadow: -4px 5px 0 black;
+            // -webkit-text-stroke: 2px $color-3;
+            text-shadow:
+                -8px -0px 0 $color-3,
+                2px -0px 0 $color-3,
+                -8px 4px 0 $color-3,
+                2px 4px 0 $color-3;
+            // text-shadow: -4px 5px 0 black;
             color: white;
             text-transform: uppercase;
             text-align: center;
@@ -56,8 +61,13 @@
 
         .titleAnim {
             background-color: $color-4;
-            -webkit-text-stroke: 2px $color-2;
-            text-shadow: -4px 5px 0 $color-1;
+            // -webkit-text-stroke: 2px $color-2;
+            // text-shadow: -4px 5px 0 $color-1;
+            text-shadow:
+                -8px -1px 0 $color-2,
+                1px -1px 0 $color-2,
+                -1px 1px 0 $color-2,
+                1px 1px 0 $color-2;
             color: white;
             height: 460px;
             margin: 30px;
@@ -97,8 +107,13 @@
         .titleAnim2 {
             font-size: 18rem;
             transform: rotateX(180deg);
-            -webkit-text-stroke: 2px $color-1;
-            text-shadow: -4px 5px 0 $color-1;
+            // -webkit-text-stroke: 2px $color-1;
+            // text-shadow: -4px 5px 0 $color-1;
+            text-shadow:
+                -8px -1px 0 $color-1,
+                1px -1px 0 $color-1,
+                -1px 1px 0 $color-1,
+                1px 1px 0 $color-1;
             color: $color-3;
             text-decoration: double;
             text-transform: uppercase;

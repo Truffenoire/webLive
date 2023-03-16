@@ -181,8 +181,6 @@ export default function Contact() {
                 <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="calque_1" x="0px"
                     y="0px" viewBox="0 0 1300 550" xmlSpace="preserve">
 
-                    {/* <circle id='path1' x="0" y="0" cx="100" cy="250" r="17.64" fill="blue" /> */}
-
                     <path className="st1" d="M 0 250 C 600 450 650 100 1300 250 L 1300 550 L 0 550 L 0 250">
                         <animate
                             attributeName="d"

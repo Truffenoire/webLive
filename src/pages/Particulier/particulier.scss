@@ -40,13 +40,21 @@
     .service {
         text-transform: uppercase;
         background-color: $color-3;
+        overflow: hidden;
 
         .title {
+            // position: relative;
             font-size: 12rem;
             color: white;
-            -webkit-text-stroke: 1px $color-1;
-            text-shadow: -4px 3px 0 black;
+            text-shadow:
+                -8px -0px 0 $color-1,
+                2px -0px 0 $color-1,
+                -8px 4px 0 $color-1,
+                2px 4px 0 $color-1;
             transform: translateX(-800px);
+            // left: -800px;
+            transform-origin: top right;
+            overflow: hidden;
         }
 
         .serviceList {
@@ -81,7 +89,12 @@
             font-size: 10rem;
             padding-top: 100px;
             color: white;
-            -webkit-text-stroke: 1px $color-1;
+            // -webkit-text-stroke: 1px $color-1;
+            text-shadow:
+                -8px 4px 0 $color-1,
+                1px -0px 0 $color-1,
+                -8px 4px 0 $color-1,
+                -2px 4px 0 $color-1;
         }
     }
 
