@@ -620,6 +620,22 @@
             animation: translateXText 15s linear reverse infinite;
         }
     }
+    .hand{
+        margin: 1rem;
+        ul {
+            list-style-type: none;
+            display: flex;
+    
+            li {
+                width: 110px;
+    
+                svg.animeHand {
+                    width: 6rem;
+                    transform-origin: 50% 50%;
+                }
+            }
+        }
+    }
 }
 
 @keyframes grossi {
