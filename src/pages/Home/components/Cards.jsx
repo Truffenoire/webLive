@@ -17,6 +17,9 @@ export default function Cards() {
     setStyleCardWow(!styleCardWow)
   }
 
+  //largeur d'ecran
+  const screenWidth = window.innerWidth;
+
   useEffect(() => {
     gsap.to('.un', {
       height: 280,
@@ -93,8 +96,11 @@ export default function Cards() {
   //     })
   // },[])
   useEffect(() => {
+    const d = screenWidth / -4 ;
+    console.log(screenWidth);
+    console.log(d);
     gsap.to('.bulleTxt1', {
-      x: -400,
+      xPercent: d,
       duration: 5,
       delay: 1,
       scrollTrigger: {
@@ -107,8 +113,9 @@ export default function Cards() {
     })
   }, [])
   useEffect(() => {
+    const d = screenWidth / -16;
     gsap.to('.bulleTxt2', {
-      x: -100,
+      xPercent: d,
       duration: 5,
       scrollTrigger: {
         trigger: ".animateCercle",
@@ -120,8 +127,10 @@ export default function Cards() {
     })
   }, [])
   useEffect(() => {
+    const d = screenWidth / -15;
+    console.log(d);
     gsap.to('.bulleTxt3', {
-      x: -130,
+      xPercent: d,
       duration: 5,
       scrollTrigger: {
         trigger: ".animateCercle",
@@ -133,8 +142,9 @@ export default function Cards() {
     })
   }, [])
   useEffect(() => {
+    // const d = screenWidth / 25 +'px';
     gsap.to('.bulleTxt4', {
-      x: 250,
+      xPercent: 25,
       duration: 5,
       scrollTrigger: {
         trigger: ".animateCercle",
@@ -146,8 +156,9 @@ export default function Cards() {
     })
   }, [])
   useEffect(() => {
+    // const d = screenWidth / 100 +'px';
     gsap.to('.bulleTxt5', {
-      x: 50,
+      xPercent: 50,
       duration: 5,
       scrollTrigger: {
         trigger: ".animateCercle",
@@ -159,8 +170,9 @@ export default function Cards() {
     })
   }, [])
   useEffect(() => {
+    // const d = screenWidth / 40 +'px';
     gsap.to('.bulleTxt6', {
-      x: 50,
+      xPercent: 30,
       duration: 5,
       scrollTrigger: {
         trigger: ".animateCercle",

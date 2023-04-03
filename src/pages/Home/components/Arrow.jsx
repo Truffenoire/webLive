@@ -9,7 +9,7 @@ export default function Arrow() {
 
     useEffect(() => {
         gsap.to('.moveArrow', {
-            y: 1200,
+            y: 850,
             scrollTrigger: {
                 trigger: ".arrow",
                 // markers: true,

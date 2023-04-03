@@ -96,6 +96,15 @@
                     overflow: hidden;
                     transform: translateY(200px);
                     text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+
+                    strong {
+                        text-shadow:
+                            -1px -1px 0 $color-1,
+                            1px -1px 0 $color-1,
+                            -1px 1px 0 $color-1,
+                            1px 1px 0 $color-1;
+
+                    }
                 }
             }
         }
@@ -136,6 +145,13 @@
                     overflow: hidden;
                     transform: translateY(200px);
                     text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+                    strong{
+                        text-shadow:
+                            -1px -1px 0 $color-1,
+                            1px -1px 0 $color-1,
+                            -1px 1px 0 $color-1,
+                            1px 1px 0 $color-1;
+                    }
 
                 }
             }
@@ -219,5 +235,147 @@
 
     100% {
         transform: translateX(0%);
+    }
+}
+
+//MEDIA QUERY
+
+@media (max-width: 768px) {
+    .entreprise {
+        .gestionEtsList {
+            .title {
+                font-size: 10.3rem;
+            }
+
+            ul {
+                .liAnim {
+                    height: 100px;
+                    font-size: 2.2rem;
+
+                    .txtAnim {
+                        overflow-wrap: break-word;
+
+                        strong {
+                            font-size: 2.5rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .gestionPersList {
+            .titleAnim {
+                font-size: 10rem;
+                height: max-content;
+            }
+
+            ul {
+                .li2Anim {
+                    height: 100px;
+                    font-size: 2.2rem;
+
+                    .txt2Anim {
+                        overflow-wrap: break-word;
+
+                        strong {
+                            font-size: 2.5rem;
+                        }
+                    }
+                }
+            }
+        }
+        
+        .gestionAdList {
+            .titleAnim2 {
+                font-size: 9rem;
+            }
+            ul {
+                .li3Anim {
+                    height: 100px;
+                    font-size: 2.2rem;
+            
+                    .txt3Anim {
+                        overflow-wrap: break-word;
+            
+                        strong {
+                            font-size: 2.5rem;
+                        }
+                    }
+                }
+            }
+        }
+        .find{
+            .toBottom{
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: max-content;
+            }
+        }
+    }
+}
+@media (max-width: 425px) {
+    .entreprise {
+        .gestionEtsList {
+            .title {
+                font-size: 5.3rem;
+            }
+            
+            ul {
+                .liAnim {
+                    height: 4rem;
+                    font-size: 1.5rem;
+                    border-bottom: 1px dotted white;
+                    .txtAnim {
+                        word-wrap: break-word;
+                        
+                        strong {
+                            font-size: 1.6rem;
+                        }
+                    }
+                }
+            }
+        }
+        
+        .gestionPersList {
+            .titleAnim {
+                font-size: 5rem;
+                height: max-content;
+            }
+            
+            ul {
+                .li2Anim {
+                    height: 4rem;
+                    font-size: 1.5rem;
+                    border-bottom: 1px solid $color-1;
+                    .txt2Anim {
+                        strong {
+                            font-size: 1.6rem;
+                        }
+                    }
+                }
+            }
+        }
+        
+        .gestionAdList {
+            .titleAnim2 {
+                font-size: 4rem;
+            }
+            ul {
+                .li3Anim {
+                    height: 4rem;
+                    font-size: 1.4rem;
+                    border-bottom: 1px solid $color-1;
+                    .txt3Anim {
+                        strong {
+                            overflow-wrap: break-word;
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+
     }
 }

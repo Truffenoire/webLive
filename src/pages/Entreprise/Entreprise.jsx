@@ -17,8 +17,10 @@ export default function Entreprise() {
             scrollTrigger: {
                 trigger: ".listAnim",
                 // markers: true,
-                start: "top 700px",
-                end: "bottom 300px",
+                // start: "top 700px",
+                // end: "bottom 300px",
+                start: "top 80%",
+                end: "bottom 50%",
                 scrub: true
             }
         })
@@ -31,8 +33,8 @@ export default function Entreprise() {
             scrollTrigger: {
                 trigger: ".persAnim",
                 // markers: true,
-                start: "top 700px",
-                end: "bottom 300px",
+                start: "top 80%",
+                end: "bottom 50%",
                 scrub: true
             }
         })
@@ -45,8 +47,8 @@ export default function Entreprise() {
             scrollTrigger: {
                 trigger: ".adAnim",
                 // markers: true,
-                start: "top 700px",
-                end: "bottom 300px",
+                start: "top 80%",
+                end: "bottom 50%",
                 scrub: true
             }
         })
@@ -60,8 +62,8 @@ export default function Entreprise() {
             scrollTrigger: {
                 trigger: ".find",
                 // markers: true,
-                start: "top 600px",
-                end: "bottom 500px",
+                start: "top 60%",
+                end: "bottom 100%",
                 scrub: true
             }
         })
@@ -149,7 +151,7 @@ export default function Entreprise() {
                     <li className='liAnim'><span className='txtAnim'><strong className='sizeUp'>Relance impayés</strong></span></li>
                     <li className='liAnim'><span className='txtAnim'>Tableau de suivi des <strong className='color sizeDown'>dépenses</strong></span></li>
                     <li className='liAnim'><span className='txtAnim'>Commandes <strong className='color sizeUp'>fournisseurs</strong></span></li>
-                    <li className='liAnim'><span className='txtAnim'>Classeurs de chantiers documents, affichages obligatoires</span></li>
+                    <li className='liAnim'><span className='txtAnim'>Classeurs de chantiers documents,<br/> affichages obligatoires</span></li>
                     <li className='liAnim'><span className='txtAnim'><strong className='color'>Gestion</strong><strong className='sizeUp'> flotte </strong><strong className='color'>automobile</strong></span></li>
                     <li className='liAnim'><span className='txtAnim'><strong className='color sizeUp'>Démarches</strong><strong className='sizeDown'> Administratives</strong></span></li>
                     <li className='liAnim'><span className='txtAnim'>Organisations de <strong className='color'>réunions</strong></span></li>
@@ -171,8 +173,8 @@ export default function Entreprise() {
                     <li className='li2Anim'><span className='txt2Anim'>Etablissement de <strong className='color'>plannings</strong></span></li>
                     <li className='li2Anim'><span className='txt2Anim'>Carte <strong className='color'>C.I.B.T.P</strong></span></li>
                     <li className='li2Anim'><span className='txt2Anim'>Notes de <strong className='color'>frais</strong></span></li>
-                    <li className='li2Anim'><span className='txt2Anim'><strong className='color'>Aide</strong> au recrutement (tri CV, réponses candidats, fiches de poste)</span></li>
-                    <li className='li2Anim'><span className='txt2Anim'><strong className='color'>Organisation des déplacements</strong> (billets, hôtels, séjours entiers)</span></li>
+                    <li className='li2Anim'><span className='txt2Anim'><strong className='color'>Aide</strong> au recrutement <br/> (tri CV, réponses candidats, fiches de poste)</span></li>
+                    <li className='li2Anim'><span className='txt2Anim'><strong className='color'>Organisation des déplacements</strong><br/> (billets, hôtels, séjours entiers)</span></li>
                 </ul>
             </div>
             <div className="gestion">
@@ -182,7 +184,7 @@ export default function Entreprise() {
             <div className="gestionAdList">
                 <h1 className='titleAnim2'>Administrative</h1>
                 <ul className='adAnim'>
-                    <li className='li3Anim'><span className='txt3Anim'><strong className='color'>Création de comptes</strong> en ligne (E.D.F, impots, fournisseurs)</span></li>
+                    <li className='li3Anim'><span className='txt3Anim'><strong className='color'>Création de comptes</strong> en ligne <br/>(E.D.F, impots, fournisseurs)</span></li>
                     <li className='li3Anim'><span className='txt3Anim'>Traitement <strong className='color'>mails</strong></span></li>
                     <li className='li3Anim'><span className='txt3Anim'><strong className='color'>Courriers / Documents</strong> : saisie, envoi</span></li>
                     <li className='li3Anim'><span className='txt3Anim'>Envois <strong className='color'>recommandés</strong></span></li>

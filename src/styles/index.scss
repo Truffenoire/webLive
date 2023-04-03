@@ -2,7 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+    //debug width
+    // box-shadow: 0 0 0 3px red inset;
+}
+.App{
+    overflow: hidden;
 }
 
 @import '../components/NavBar/navBar.scss';

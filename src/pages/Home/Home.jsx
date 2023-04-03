@@ -6,6 +6,7 @@ import Movie from './components/Movie'
 import Vignette from './components/Vignette'
 import Hey from './components/Hey'
 import TalkAbout from './components/TalkAbout'
+import Avis from './components/Avis'
 
 
 
@@ -20,6 +21,7 @@ export default function Home() {
       <Vignette />
       <Hey />
       <TalkAbout />
+      <Avis />
     </div>
   )
 }

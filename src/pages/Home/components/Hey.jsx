@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 import { gsap } from "gsap"
 
@@ -7,10 +7,18 @@ import portrait from '../../../imgImport/portraitAnne.png'
 
 export default function Hey() {
 
+    const portraitRef = useRef(null)
+    const [ divHeight, setDivHeight ] = useState()
 
-     useEffect(() => {
+    
+    useEffect(() => {
+        const h = portraitRef.current.clientHeight;
+        const d = (h * 41) / 100; 
+        const move = h - d;
+        setDivHeight(move)
+        // console.log('m', divHeight);
             gsap.to('.portrait', {
-                y: 1200,
+                y: divHeight,
                 duration: 10,
                 ease: 'easeInOut',
                 scrollTrigger: {
@@ -21,13 +29,13 @@ export default function Hey() {
                     scrub: true,
                 }
             })
-        },[])
+        },[divHeight])
 
     return (
         <section className='autoBio'>
             <h1>Hey <span>les petites et moyennes entreprises</span></h1>
             <p className='pTitle'>voici ce que vous devez savoir sur moi.</p>
-            <div className='flexPortrait'>
+            <div ref={portraitRef} className='flexPortrait'>
                 <ol>
                     <li>
                         <h3>Le mot clé : <span>déléguez !</span></h3>

@@ -14,8 +14,8 @@ export default function Particulier() {
       scrollTrigger: {
         trigger: ".find",
         // markers: true,
-        start: "top 600px",
-        end: "bottom 500px",
+        start: "top 60%",
+        end: "bottom 100%",
         scrub: true
       }
     })
@@ -28,8 +28,8 @@ export default function Particulier() {
       scrollTrigger: {
         trigger: ".find",
         // markers: true,
-        start: "top 600px",
-        end: "bottom 500px",
+        start: "top 60%",
+        end: "bottom 90%",
         scrub: true
       }
     })
@@ -43,8 +43,8 @@ export default function Particulier() {
         scrollTrigger: {
             trigger: ".serviceList",
             // markers: true,
-            start: "top 700px",
-            end: "bottom 300px",
+            start: "top 80%",
+            end: "bottom 50%",
             scrub: true
         }
     })
@@ -52,7 +52,7 @@ export default function Particulier() {
 
 useEffect(() => {
   gsap.to('.title', {
-      x: 800,
+      x: 0,
       duration: 0.5,
       scrollTrigger: {
           trigger: ".title",
@@ -75,12 +75,12 @@ useEffect(() => {
         <ul className="serviceList">
           <li className='liAnim'><span className='txtAnim'> <strong className='color'>Lettres</strong> personnelles, professionnelles</span></li>
           <li className='liAnim'><span className='txtAnim'> Cv <strong className='italic'>lettres de motivation</strong>, demission, disponibilité</span></li>
-          <li className='liAnim'><span className='txtAnim'> <strong className="sizeDown"> Courriers et gestion des dossiers CAF SECU Pole emploi</strong> <strong className='color'>lettre de reclamation</strong></span></li>
+          <li className='liAnim'><span className='txtAnim'> <strong className="sizeDown"> Courriers et gestion des dossiers <br/> CAF SECU Pole emploi</strong> <strong className='color'>lettre de reclamation</strong></span></li>
           <li className='liAnim'><span className='txtAnim'> <strong className='color'>Recommandés</strong> ou envoi de courriers</span></li>
           <li className='liAnim'><span className='txtAnim'> <strong className='italic'>Changement d'adresse</strong></span></li>
           <li className='liAnim'><span className='txtAnim'> Organisation de votre boîte <strong className='color'>mail</strong></span></li>
-          <li className='liAnim'><span className='txtAnim'> Reservation ou organisation de vos vacances ou évenements privés</span></li>
-          <li className='liAnim'><span className='txtAnim'> <strong className='color'>Commandes de cadeaux fete des mères, anniversaires</strong></span></li>
+          <li className='liAnim'><span className='txtAnim'> Reservation ou organisation de vos <br/> vacances ou évenements privés</span></li>
+          <li className='liAnim'><span className='txtAnim'> <strong className='color'>Commandes de cadeaux fete des mères,<br/> anniversaires</strong></span></li>
           <li className='liAnim'><span className='txtAnim'> tri optimal <strong className='italic'>système d'archivage classement informatique</strong></span></li>
         </ul>
         <h2 id='more'>ETC...</h2>
