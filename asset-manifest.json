@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/webLive/static/css/main.ff4b3487.css",
+    "main.js": "/webLive/static/js/main.b96141f5.js",
+    "static/media/movieAccueil.mp4": "/webLive/static/media/movieAccueil.31122fbf6204be4b89cd.mp4",
+    "static/media/letter.png": "/webLive/static/media/letter.f74c45cf8cd390223250.png",
+    "static/media/enveloppe.png": "/webLive/static/media/enveloppe.8070aa5c0eba976a4f1f.png",
+    "static/media/mongol.jpg": "/webLive/static/media/mongol.82a6f096729835f22c10.jpg",
+    "static/media/lettreCachet.png": "/webLive/static/media/lettreCachet.398353d1659ce3f89e95.png",
+    "static/media/portraitAnne.png": "/webLive/static/media/portraitAnne.2704c6732034d0e4f913.png",
+    "static/media/5.jpg": "/webLive/static/media/5.b84a4bcfddb14b5758cf.jpg",
+    "static/media/timbre2.png": "/webLive/static/media/timbre2.43333ec2682674d3ecba.png",
+    "static/media/timbre.png": "/webLive/static/media/timbre.c1bfb9eae285eab19688.png",
+    "static/media/BarlowCondensed-Thin.ttf": "/webLive/static/media/BarlowCondensed-Thin.5ab5aa2588185da4dace.ttf",
+    "static/media/4.png": "/webLive/static/media/4.cfb0944ee40bf45f7a9b.png",
+    "static/media/3.jpg": "/webLive/static/media/3.16d36ad7169a96cb477f.jpg",
+    "static/media/2.jpg": "/webLive/static/media/2.916eb62c3af4a83104bb.jpg",
+    "static/media/lettre.png": "/webLive/static/media/lettre.090e745a8deea8b6688b.png",
+    "static/media/email-collage-counter.png": "/webLive/static/media/email-collage-counter.3b7c984b42c79929632c.png",
+    "static/media/grid.svg": "/webLive/static/media/grid.23493649ae6fa5700f60.svg",
+    "static/media/logoPetit.png": "/webLive/static/media/logoPetit.fef0886b61d1d978c5e6.png",
+    "static/media/Group1.svg": "/webLive/static/media/Group1.125eb95e6db899669437fcda482c08b4.svg",
+    "index.html": "/webLive/index.html",
+    "static/media/Group3.svg": "/webLive/static/media/Group3.a31e5aad0c9bda8d3dc21007061c7466.svg",
+    "main.ff4b3487.css.map": "/webLive/static/css/main.ff4b3487.css.map",
+    "main.b96141f5.js.map": "/webLive/static/js/main.b96141f5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ff4b3487.css",
+    "static/js/main.b96141f5.js"
+  ]
+}
