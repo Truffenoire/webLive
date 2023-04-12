@@ -33,7 +33,7 @@ export default function Hey() {
 
     return (
         <section className='autoBio'>
-            <h1>Hey <span>les petites et moyennes entreprises</span></h1>
+            <h1>Hey <span>les petites et moyennes entreprises,</span></h1>
             <p className='pTitle'>voici ce que vous devez savoir sur moi.</p>
             <div ref={portraitRef} className='flexPortrait'>
                 <ol>

@@ -22,19 +22,36 @@ function Footer({ isCharged, setIsCharged }) {
     const h1Ref = useRef(null)
 
     useEffect(() => {
-        gsap.timeline().to('.h1Anim span', {
+        const footTL = gsap.timeline();
+
+        footTL.to('.h1Anim span', {
             y: 0,
             color: '#a6cfd5',
             duration: 0.8,
             stagger: 0.3,
-            scrollTrigger: {
-                trigger: "footer",
-                // markers: true,
-                start: "top 90%",
-                end: "bottom 100%",
-                scrub: true
-            }
         })
+
+        ScrollTrigger.create({
+            trigger: "footer",
+            scrub: true,
+            start: "top 90%",
+            end: "bottom 100%",
+            animation: footTL,
+        })
+        // gsap.timeline().to('.h1Anim span', {
+        //     y: 0,
+        //     color: '#a6cfd5',
+        //     duration: 0.8,
+        //     stagger: 0.3,
+        //     scrollTrigger: {
+        //         trigger: "footer",
+        //         // markers: true,
+        //         start: "top 90%",
+        //         end: "bottom 100%",
+        //         scrub: true
+        //     }
+        // })
+
     },[isCharged, location.pathname])
 
     // useEffect(() => {

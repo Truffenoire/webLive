@@ -1,0 +1,28 @@
+.banniere{
+    h2{
+        padding: 5vh;
+        font-size: 2vw;
+    }
+    .boxToRight{
+        display: flex;
+        justify-content: flex-end;
+        svg{
+            width: 100vw;
+            height: 70vh;
+            .txtBox{
+                border: 1px solid $color-6;
+                padding: 1rem;
+                font-size: 3.5vw;
+                color: $color-6;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                text-shadow: 
+                -1px 1px 0 $color-3,
+                -1px 1px 0 $color-3,
+                -1px 1px 0 $color-3,
+                -1px 1px 0 $color-3;
+            }
+        }
+    }
+}

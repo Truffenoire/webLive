@@ -7,6 +7,7 @@ import Footer from "./components/Footer/Footer";
 import Contact from "./pages/Contact/Contact";
 import Entreprise from "./pages/Entreprise/Entreprise";
 import Particulier from "./pages/Particulier/Particulier";
+import Tarifs from "./pages/Tarifs/Tarifs";
 import { useEffect } from "react";
 
 import { gsap } from "gsap"
@@ -29,6 +30,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/entreprise" element={<Entreprise />} />
         <Route path="/particulier" element={<Particulier />} />
+        <Route path="/tarifs" element={<Tarifs />} />
       </Routes>
       <Footer isCharged={isCharged} setIsCharged={setIsCharged}/>
     </div>

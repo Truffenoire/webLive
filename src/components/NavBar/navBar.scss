@@ -27,6 +27,19 @@
             gap: 150px;
             font-size: 2rem;
             color: white;
+            li:nth-child(1){
+                font-family: ThunderBlackHc, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                font-size: 3rem;
+                text-shadow:
+                -1px 1px 0 $color-4,
+                -1px 1px 0 $color-4,
+                -1px 1px 0 $color-4,
+                -1px 1px 0 $color-4;
+                a{
+                    color: white;
+                    text-decoration: none;
+                }
+            } 
 
             #contentWord {
                 width: 130px;
@@ -114,15 +127,16 @@
                 justify-content: space-evenly;
                 padding: 100px 0;
 
-                div {
+                div#growUp {
                     ul {
                         display: flex;
                         flex-direction: column;
                         align-items: center;
                         background-color: $color-4;
                         position: absolute;
-                        width: 50%;
-                        left: 30%;
+                        // width: 50%;
+                        left: 50%;
+                        transform: translateX(-50%);
                         animation: growToAll .5s ease-in-out both;
                         text-transform: uppercase;
                     }
@@ -316,6 +330,7 @@
         }
         .nav{
             .imgLogo{
+                width: 95%;
                 .menuFooter{
                     img{
                         width: 100px;
@@ -333,8 +348,13 @@
                     }
                     li{
                         a{
-                            font-size: 1.5rem;
+                            font-size: 1.3rem;
                         }
+                    }
+                }
+                .closeMenu{
+                    svg{
+                        width: 50px;
                     }
                 }
             }

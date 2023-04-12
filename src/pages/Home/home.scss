@@ -69,6 +69,7 @@
                     color: white;
                     text-transform: uppercase;
                     font-size: 7rem;
+                    margin-top: 40px;
                     padding: 1rem;
                 }
 
@@ -82,9 +83,20 @@
             #cardDo {
                 transform: translateY(150px);
                 z-index: 1;
-
+                &::before{
+                    content: '';
+                    height: 1px;
+                    width: 100%;
+                    background-color: white;
+                    position: absolute;
+                    top: 15px;
+                    left: 0;
+                }
                 &:hover {
                     animation: toUp .3s ease-in-out both;
+                    &::before{
+                        background-color: #66cc99;
+                    }
                 }
 
                 #mouseArrow {
@@ -100,12 +112,20 @@
                 &:hover {
                     animation: toUp2 .3s ease-in-out both;
                 }
+                h2.h2Wow{
+                    margin-top: -40px;
+                }
             }
-
+            
             h2.hovered {
                 color: #66cc99;
                 font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
                 letter-spacing: -5px;
+                text-shadow: 
+                    -1px 1px 0 white,
+                    -1px 1px 0 white,
+                    -1px 1px 0 white,
+                    -1px 1px 0 white;
             }
 
             svg.hovered {
@@ -191,7 +211,6 @@
                 box-shadow: inset 0px 0px 25px black;
                 width: 280px;
                 height: 280px;
-                // animation: scaleGrowUp 1s infinite alternate;
             }
 
             .bulleTxt1 {
@@ -311,7 +330,7 @@
 //CSS MOVIE
 #movieScreen {
     animation: growUp ease-in-out 0.5s both;
-
+    
     video {
         animation: radFit ease-in 0.5s both;
     }
@@ -335,6 +354,25 @@
         height: 100%;
         border-radius: 40%;
 
+    }
+    .redArrow{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        bottom: 100px;
+        right: -30px;
+        border-radius: 50%;
+        background-color: rgb(241, 113, 107);
+        cursor: pointer;
+        .btnArrow{
+            width: 80%;
+            height: 80%;
+            transform-origin: 50% 50%;
+            transform: rotateZ(90deg);
+        }
     }
 }
 
@@ -377,7 +415,6 @@
             width: 100%;
             gap: 1vw;
             mix-blend-mode: overlay;
-
             .index0 {
                 top: -75px;
 
@@ -438,6 +475,8 @@
                     justify-content: space-around;
 
                     h2 {
+                        font-family: ThunderExtraLightHc;
+                        text-transform: uppercase;
                         flex-grow: 1;
                         display: inline-flex;
                         align-items: center;
@@ -483,21 +522,23 @@
     align-items: center;
 
     h1 {
+        font-family: ThunderThinHc;
         font-size: 6rem;
         margin: 5rem 0;
-
+        
         span {
             color: $color-3;
             //illusion de text stroke avec une ombre
             text-shadow:
-                -4px -1px 0 #000,
-                1px -1px 0 #000,
-                -1px 1px 0 #000,
-                1px 1px 0 #000;
+            -4px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
         }
     }
-
+    
     p.pTitle {
+        font-family: ThunderThinHc;
         font-size: 6rem;
         margin: 0 0 4rem 0;
     }
@@ -790,14 +831,15 @@
     0% {
         width: 200px;
         height: 400px;
-        left: 65%;
+        left: 75%;
+        // top: 20%;
     }
 
     100% {
         width: 1000px;
         height: 500px;
         top: 10%;
-        left: 0;
+        left: 25%;
         z-index: 10;
     }
 }
@@ -816,6 +858,15 @@
 }
 
 //MEDIA QUERY
+@media (max-width: 1024px) {
+    .homeContainer{
+        #movieScreen{
+            video{
+                width: 700px;
+            }
+        }
+    }
+}
 
 @media (max-width: 768px) {
     .homeContainer {
@@ -834,7 +885,7 @@
             .containCards {
                 #cardDo {
                     width: 80%;
-
+                    
                     #mouseArrow {
                         display: none;
                     }

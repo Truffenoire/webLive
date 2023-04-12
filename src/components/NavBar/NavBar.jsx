@@ -68,7 +68,7 @@ export default function NavBar({ isCharged, setIsCharged }) {
       {/* <div id='ancre' className='logoContainer'><img src={Logo} alt="logo" /> */}
       <div id='ancre' className='headerContainer'>
         <ul>
-          <li>Secretariat Live</li>
+          <li><Link to={'/#ancre'} >Secrétariat Live</Link></li>
           <li id='contentWord'></li>
           <li className='animate'>
             <animated.div style={{

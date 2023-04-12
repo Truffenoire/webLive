@@ -5,6 +5,9 @@
     //debug width
     // box-shadow: 0 0 0 3px red inset;
 }
+// ::-webkit-scrollbar-thumb{
+//     background: transparent;
+// }
 .App{
     overflow: hidden;
 }
@@ -15,5 +18,9 @@
 @import '../pages/Contact/contact.scss';
 @import '../pages/Entreprise/entreprise.scss';
 @import '../pages/Particulier/particulier.scss';
+@import '../pages/tarifs/components/Title/title.scss';
+@import '../pages/tarifs/components/Card/card.scss';
+@import '../pages/tarifs/components/Banniere/banniere.scss';
+@import '../pages/tarifs/components/How/how.scss';
 @import './font.scss';
 

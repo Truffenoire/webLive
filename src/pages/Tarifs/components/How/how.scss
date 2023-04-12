@@ -1,0 +1,85 @@
+.how{
+    display: flex;
+    justify-content: center;
+    
+    .howList{
+        list-style-type: none;
+        width: 50%;
+        .liList{
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid black;
+            gap: 2vw;
+            height: 15vh;
+            align-items: center;
+            // border-bottom: 1px solid black;
+
+            .number{
+                font-size: 3vw;
+                // overflow: hidden;
+                .numList{
+                    display: flex;
+                    flex-direction: column;
+                    overflow: hidden;
+                    list-style-type: none;
+                    .liNumListTranslate{
+                        display: flex;
+                        position: relative;
+                        transform: translateY(-80px);
+                        opacity: 0;
+                        .numbersTranslate{
+                            opacity: 0;
+                            transform: translateY(-25px);
+                        }
+                    }
+                    .liNumList{
+                        display: flex;
+                        // position: absolute;
+                        // position: relative;
+                        transform: translateY(-30px);
+                    }
+                }
+            }
+            .title{
+                font-size: 3vw;
+                color: $color-3;
+                flex-grow: 1;
+                text-shadow: 
+                -1px 1px 0 $color-1,
+                -1px 1px 0 $color-1,
+                -1px 1px 0 $color-1,
+                -1px 1px 0 $color-1;
+            }
+            .btn{
+                font-size: 3vw;
+                z-index: 20;
+                position: relative;
+                cursor: pointer;
+            }
+        }
+    .isClicked{
+        animation: smootheClick 1s ease-in-out both;
+    }
+    .hide{
+        height: 0;
+        font-size: 2vw;
+        padding: 0 5vw;
+        overflow: hidden;
+        ul{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+}
+@keyframes smootheClick {
+    0% {
+        opacity: 0;
+        height: 0px;
+    }
+    
+    100% {
+        opacity: 1;
+        height: 110px;
+    }
+}

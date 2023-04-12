@@ -10,7 +10,6 @@ import Avis from './components/Avis'
 
 
 
-
 export default function Home() {
 
   return (

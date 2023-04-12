@@ -198,7 +198,7 @@ export default function Cards() {
           </div>
         </div>
         <div onMouseEnter={handleStyleWow} onMouseLeave={() => setStyleCardWow(false)} className="card" id='cardWow'>
-          <h2 className={styleCardWow ? 'hovered' : undefined}><span>WOW</span> mais</h2>
+          <h2 className={styleCardWow ? 'hovered h2Wow' : 'h2Wow'}><span>WOW</span> mais</h2>
           <p>aussi</p>
         </div>
       </div>
@@ -212,12 +212,12 @@ export default function Cards() {
           <div className="circle deux"></div>
           <div className="circle trois"></div>
           <div className="circle quatre"></div>
-          <div className='bulleTxt1'>Gagner en liberté, productivité, frais.</div>
-          <div className='bulleTxt2'>Pour pallier à une surcharge de travail temporaire ou combler l'absence de votre secretaire en congé ou malade.</div>
-          <div className='bulleTxt3'>Se dégager du temps pour son activité, ses clients, rechercher de nouveau contrats.</div>
-          <div className='bulleTxt4'>Anticiper, suivre, gerer, vous êtes à jour de votre administratif.</div>
-          <div className='bulleTxt5'>Terminer les frais et charges salariales.</div>
-          <div className='bulleTxt6'>Pas d'engagements, pas de contrat.</div>
+          <div className='bulleTxt1'>Gagner en liberté, productivité, frais</div>
+          <div className='bulleTxt2'>Pour pallier à une surcharge de travail temporaire ou combler l'absence de votre secretaire en congé ou malade</div>
+          <div className='bulleTxt3'>Se dégager du temps pour son activité, ses clients, rechercher de nouveau contrats</div>
+          <div className='bulleTxt4'>Anticiper, suivre, gerer, vous êtes à jour de votre administratif</div>
+          <div className='bulleTxt5'>Terminer les frais et charges salariales</div>
+          <div className='bulleTxt6'>Pas d'engagement, pas de contrat</div>
         </div>
       </div>
     </div>

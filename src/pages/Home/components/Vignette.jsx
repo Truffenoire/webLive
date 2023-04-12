@@ -43,11 +43,11 @@ export default function Vignette() {
 
     const images = [img1, img2, img3, img4, img5];
     const titreDeleguez = [
-        "Sans frais liés à l'embauche.",
-        "Sans engagement, ponctuelle ou régulier.",
-        "A distance ou de son domicile.",
-        "Moyennes et petites entreprises.",
-        "Aide aux particuliers."
+        "Sans frais liés à l'embauche",
+        "Sans engagement, ponctuel ou régulier",
+        "A distance ou de son domicile",
+        "Moyennes et petites entreprises",
+        "Aide aux particuliers"
     ];
     const easy = [
         <svg className='fromBack' width="99" height="151" viewBox="0 0 99 151" fill="none" xmlns="http://www.w3.org/2000/svg">

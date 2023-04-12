@@ -9,6 +9,18 @@
     font-family: "BarlowThin";
     src: url("/fonts/BarlowCondensed-Thin.ttf") format('truetype');
 }
+@font-face {
+    font-family: "ThunderThinHc";
+    src: url("/fonts/Thunder-ThinHC.ttf") format('truetype');
+}
+@font-face {
+    font-family: "ThunderExtraLightHc";
+    src: url("/fonts/Thunder-ExtraLightHC.ttf") format('truetype');
+}
+@font-face {
+    font-family: "ThunderBlackHc";
+    src: url("/fonts/Thunder-BlackHC.ttf") format('truetype');
+}
 
 
 .App {

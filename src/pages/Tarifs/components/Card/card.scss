@@ -1,0 +1,111 @@
+.cardTarif{
+    .boxSvg{
+        height: 100vh;
+        display: flex;
+        svg{
+            .contain{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                .bLeft{
+                    border-left: 1px solid white;
+                }
+                .forfaitContain{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: center;
+                    height: 100%;
+                    width: 50%;
+                    flex-grow: 1;
+                    .forfait{
+                        color: $color-2;
+                        font-size: 2rem;
+                        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                        text-shadow: 
+                        -1px 1px 0 white,
+                        -1px 1px 0 white,
+                        -1px 1px 0 white,
+                        -1px 1px 0 white;
+                    }
+                    .heure{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        border: 1px solid $color-5;
+                        background-color: #b79492;
+                        margin: 3rem 0;
+                        padding: 1.5rem;
+                        font-size: 1rem;
+                        text-shadow: 
+                        -0.5px 0.5px 0 white,
+                        -0.5px 0.5px 0 white,
+                        -0.5px 0.5px 0 white,
+                        -0.5px 0.5px 0 white;
+                    }
+                    .prix{
+                        font-family: ThunderExtraLightHc;
+                        font-size: 3rem;
+                        flex-grow: 4;
+                        text-shadow: 
+                        -1px 1px 0 white,
+                        -1px 1px 0 white,
+                        -1px 1px 0 white,
+                        -1px 1px 0 white;
+                    }
+                    div.mPrice{
+                        text-align: center;
+                        font-size: 2.5rem;
+                        span{
+                            color: $color-4;
+                        }
+                        b{
+                            border: 1px solid black;
+                            border-radius: 50%;
+                            display: inline-flex;
+                            align-items: center;
+                            justify-content: center;
+                            height: 30px;
+                            width: max-content;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .svgBtn{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1rem;
+        svg{
+            cursor: pointer;
+            outline: none;
+            height: 100px;
+            .txtBtn{
+                position: relative;
+                font-family: ThunderThinHc;
+                font-size: 1.3rem;
+                transform-origin: 50% 50%;
+                text-align: center;
+                line-height: 50px;
+                transform: scale(0);
+                z-index: 10;
+                text-shadow: 
+                        -1px 1px 0 $color-5,
+                        -1px 1px 0 $color-5,
+                        -1px 1px 0 $color-5,
+                        -1px 1px 0 $color-5;
+                &:hover{
+                    text-shadow: 
+                        -1px 1px 0 $color-3,
+                        -1px 1px 0 $color-3,
+                        -1px 1px 0 $color-3,
+                        -1px 1px 0 $color-3;
+                }
+            }
+        }
+    }
+}
