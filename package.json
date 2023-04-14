@@ -2,7 +2,7 @@
   "name": "web-live",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://truffenoire.github.io/",
+  "homepage": "https://truffenoire.github.io/webLive",
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
     "@react-spring/web": "^9.6.1",
