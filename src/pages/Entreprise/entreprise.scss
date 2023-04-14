@@ -319,19 +319,19 @@
     .entreprise {
         .gestionEtsList {
             .title {
-                font-size: 5.3rem;
+                font-size: 4.3rem;
             }
             
             ul {
                 .liAnim {
                     height: 4rem;
-                    font-size: 1.5rem;
+                    font-size: clamp(1rem, 1.5vw, 1.5rem);
                     border-bottom: 1px dotted white;
                     .txtAnim {
                         word-wrap: break-word;
                         
                         strong {
-                            font-size: 1.6rem;
+                            font-size: 1.2rem;
                         }
                     }
                 }
@@ -340,18 +340,18 @@
         
         .gestionPersList {
             .titleAnim {
-                font-size: 5rem;
+                font-size: 4rem;
                 height: max-content;
             }
             
             ul {
                 .li2Anim {
                     height: 4rem;
-                    font-size: 1.5rem;
+                    font-size: clamp(1rem, 1.5vw, 1.5rem);
                     border-bottom: 1px solid $color-1;
                     .txt2Anim {
                         strong {
-                            font-size: 1.6rem;
+                            font-size: 1.5rem;
                         }
                     }
                 }
@@ -360,19 +360,26 @@
         
         .gestionAdList {
             .titleAnim2 {
-                font-size: 4rem;
+                font-size: 3.8rem;
             }
             ul {
                 .li3Anim {
                     height: 4rem;
-                    font-size: 1.4rem;
+                    font-size: clamp(1rem, 1.5vw, 1.5rem);
                     border-bottom: 1px solid $color-1;
                     .txt3Anim {
                         strong {
                             overflow-wrap: break-word;
-                            font-size: 1.5rem;
+                            font-size: 1.2rem;
                         }
                     }
+                }
+            }
+        }
+        .find{
+            .titleAnim{
+                .h2Anim{
+                    font-size: 3rem;
                 }
             }
         }

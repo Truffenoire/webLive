@@ -2,13 +2,13 @@
     h1.bannerTarif{
         display: flex;
         justify-content: space-around;
-        font-size: 30rem;
+        font-size: clamp(6rem, 30vw, 30rem);
         // height: 100vh;
         span{
             display: block;
             transform: translateY(-100px);
             opacity: 0;
-            color: blue;
+            // color: blue;
             text-shadow: 
             -4px 1px 0 $color-1,
             -4px 1px 0 $color-1,

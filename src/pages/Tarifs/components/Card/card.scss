@@ -32,14 +32,14 @@
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        width: 40px;
-                        height: 40px;
+                        width: 80px;
+                        height: 80px;
                         border-radius: 50%;
                         border: 1px solid $color-5;
                         background-color: #b79492;
-                        margin: 3rem 0;
+                        margin: 2rem 0;
                         padding: 1.5rem;
-                        font-size: 1rem;
+                        font-size: clamp(1.5rem, 3vw, 1.5rem);
                         text-shadow: 
                         -0.5px 0.5px 0 white,
                         -0.5px 0.5px 0 white,
@@ -58,7 +58,7 @@
                     }
                     div.mPrice{
                         text-align: center;
-                        font-size: 2.5rem;
+                        font-size: clamp(2.5rem, 1rem, 2.5rem );
                         span{
                             color: $color-4;
                         }
@@ -87,7 +87,7 @@
             .txtBtn{
                 position: relative;
                 font-family: ThunderThinHc;
-                font-size: 1.3rem;
+                font-size: clamp(1rem, 1.3vw, 1.3rem);
                 transform-origin: 50% 50%;
                 text-align: center;
                 line-height: 50px;
@@ -106,6 +106,14 @@
                         -1px 1px 0 $color-3;
                 }
             }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .cardTarif{
+        .boxSvg{
+            height: max-content;
+            flex-direction: column;
         }
     }
 }

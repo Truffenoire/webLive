@@ -74,6 +74,7 @@ useEffect(() => {
     const btn = btnRef.current
 
     gsap.set(btn, {
+        display: 'inline-block',
         stroke: '#a6cfd5',
         strokeWidth: '1',
         strokeDasharray: '260',
@@ -171,7 +172,7 @@ return (
             // onClick={onClick}
             // onKeyDown={onKeyDown}
             >
-                <rect ref={btnRef} x="0" y="0" width="100" height="50" rx="25" fill="#fff" />
+                <rect ref={btnRef} x="0" y="0" width="clamp(100px, calc(100vw / 14.4), 100px)" height="clamp(40px, calc(100vh / 17.7), 50px)" rx="25" fill="#fff" />
                 <foreignObject x='0' y='0' width='100' height="50">
                     <div className='txtBtn'>
                         Devis Gratuit

@@ -4,9 +4,9 @@ footer {
     overflow: hidden;
 
     h1 {
-        padding: 5rem;
+        padding: 4rem;
         text-align: center;
-        font-size: 17rem;
+        font-size: clamp(3rem, 16vw, 16rem);
         color: $color-5;
         overflow: hidden;
 
@@ -85,7 +85,7 @@ footer {
         max-height: 650px;
         .h1Anim{
             padding: 5rem 0;
-            font-size: 8rem;
+            // font-size: 8rem;
         }
         .reseau{
             margin-left: 100px;
@@ -103,7 +103,7 @@ footer {
         max-height: 500px;
         .h1Anim{
             padding: 5rem 0;
-            font-size: 4rem;
+            // font-size: 4rem;
         }
         .contain{
             font-size: 1rem;

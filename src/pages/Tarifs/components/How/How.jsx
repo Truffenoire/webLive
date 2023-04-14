@@ -46,7 +46,7 @@ export default function How() {
                     );
                     break;
                 case '4':
-                    gsap.to(divClicked[4], { height: 270 });
+                    gsap.to(divClicked[4], { height: 325 });
                     break;
 
                 default:
@@ -82,6 +82,7 @@ export default function How() {
                 .to(translateNum, {
                     opacity: 1,
                     y: 30,
+                    // top: 16.5,
                     duration: 0.3,
                 })
                 .to(transEnfantNum, {

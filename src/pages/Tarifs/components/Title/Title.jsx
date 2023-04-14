@@ -29,7 +29,7 @@ export default function Title() {
         {
             y: -100,
             opacity: 0,
-            color: 'blue'
+            // color: 'blue'
         },
         {
             y: 0,
