@@ -1,0 +1,86 @@
+.tabList {
+    padding: 3vw;
+
+    li {
+        font-size: clamp(1.2rem, 2vw, 2rem);
+        padding: 0.5rem;
+        font-family: roboto;
+        span {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: $color-5;
+            text-shadow:
+                -1px 1px 0 $color-1,
+                -1px 1px 0 $color-1,
+                -1px 1px 0 $color-1,
+                -1px 1px 0 $color-1;
+            text-transform: uppercase;
+            text-decoration: underline;
+        }
+    }
+
+    .exit {
+        display: flex;
+        gap: 1rem;
+        margin: 3vw 0;
+        .salaire{
+            background-color: $color-3;
+            width: 50%;
+            overflow: hidden;
+            h2{
+                color: white;
+            }
+        }
+        .patron{
+            background-color: rgb(245, 237, 237);
+            width: 50%;
+            overflow: hidden;
+            h2{
+                color: $color-4;
+            }
+        }
+        ul {
+            display: flex;
+            flex-direction: column;
+            // justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+
+            h2 {
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                text-shadow:
+                    -1px 1px 0 $color-1,
+                    -1px 1px 0 $color-1,
+                    -1px 1px 0 $color-1,
+                    -1px 1px 0 $color-1;
+                font-size: clamp(1.7rem, 2vw, 1.9rem);
+            }
+
+            p {
+                font-size: clamp(1.5rem, 2vw, 1.6rem);
+                margin: 1rem 0;
+
+            }
+
+            li {
+                width: 80%;
+                font-size: clamp(1.5rem, 2vw, 1.6rem);
+                list-style-type: disc;
+                transform: translateX(-50px);
+                opacity: 0;
+            }
+        }
+    }
+}
+@media (max-width: 425px) {
+    .tabList{
+        .exit{
+            flex-direction: column;
+            ul.salaire{
+                width: 100%;
+            }
+            ul.patron{
+                width: 100%;
+            }
+        }
+    }
+}
