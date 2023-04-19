@@ -9,27 +9,29 @@ export default function Particulier() {
   useEffect(() => {
     gsap.timeline().to('.toBottom li', {
       y: 0,
-      duration: 0.2,
+      // duration: 0.2,
       stagger: 0.2,
       scrollTrigger: {
         trigger: ".find",
         // markers: true,
         start: "top 60%",
-        end: "bottom 100%",
+        end: "bottom 40%",
         scrub: true
       }
     })
   }, [])
   useEffect(() => {
-    gsap.timeline().to('.h2Anim', {
+    const h2Animation = document.querySelectorAll('.h2Anim')
+    const h2TL = gsap.timeline()
+    h2TL.to(h2Animation, {
       y: 0,
-      duration: 0.2,
-      stagger: 0.1,
+      // duration: 0.2,
+      stagger: 0.5,
       scrollTrigger: {
         trigger: ".find",
         // markers: true,
         start: "top 60%",
-        end: "bottom 90%",
+        end: "bottom 40%",
         scrub: true
       }
     })

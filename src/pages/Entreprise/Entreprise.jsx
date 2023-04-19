@@ -55,15 +55,18 @@ export default function Entreprise() {
     }, [])
     // animation li bas de page
     useEffect(() => {
-        gsap.timeline().to('.toBottom li', {
+        const liUp = document.querySelectorAll('.toBottom li')
+        const bienCTTL = gsap.timeline()
+        bienCTTL.to(liUp, {
             y: 0,
-            duration: 0.2,
-            stagger: 0.2,
+            opacity: 1,
+            // duration: 0.2,
+            stagger: 0.5,
             scrollTrigger: {
                 trigger: ".find",
                 // markers: true,
                 start: "top 60%",
-                end: "bottom 100%",
+                end: "bottom 40%",
                 scrub: true
             }
         })
@@ -71,7 +74,7 @@ export default function Entreprise() {
     useEffect(() => {
         gsap.timeline().to('.h2Anim', {
             y: 0,
-            duration: 0.2,
+            // duration: 1,
             stagger: 0.1,
             scrollTrigger: {
                 trigger: ".find",

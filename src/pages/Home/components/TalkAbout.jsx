@@ -53,7 +53,7 @@ export default function TalkAbout() {
 
     return (
         <section className='talkAbout'>
-            <h1>Ils parlent <br /> de nous</h1>
+            <h1>Ils <br /> parlent <br /> de nous</h1>
 
             <div className="hand">
                 <ul>

@@ -1,6 +1,7 @@
 @import '../../styles/colors.scss';
 
 .navBarContainer {
+    position: relative;
     display: flex;
     justify-content: center;
     height: 75vh;
@@ -176,7 +177,7 @@
                     a {
                         text-decoration: none;
                         color: black;
-                        font-size: 22px;
+                        font-size: clamp(1rem, 2vw, 22px);
                         font-weight: 800;
                     }
                 }
@@ -193,6 +194,10 @@
                     width: max-content;
                     color: black;
                     text-decoration: underline;
+                    a{
+                        text-decoration: none;
+                        color: black;
+                    }
                 }
             }
 

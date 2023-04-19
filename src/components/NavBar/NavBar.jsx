@@ -68,7 +68,7 @@ export default function NavBar({ isCharged, setIsCharged }) {
       {/* <div id='ancre' className='logoContainer'><img src={Logo} alt="logo" /> */}
       <div id='ancre' className='headerContainer'>
         <ul>
-          <li><Link to={'/#ancre'} >Secrétariat Live</Link></li>
+          <li><Link to={'/#ancre'}>Secrétariat Live</Link></li>
           <li id='contentWord'></li>
           <li className='animate'>
             <animated.div style={{
@@ -96,12 +96,12 @@ export default function NavBar({ isCharged, setIsCharged }) {
             <div className='menuFooter'>
               <img src={Logo} alt="logo" />
               <ul className='lienReseau'>
-                <li>+ Instagram</li>
-                <li>+ FaceBook</li>
-                <li>+ LinkedIn</li>
+                <li><Link to={'https://www.instagram.com/secretariatlive/'}  target='_blank' >+ Instagram</Link></li>
+                <li><Link to={'https://www.facebook.com/Secretariatlive'} target='_blank'>+ FaceBook</Link></li>
+                <li><Link to={'https://www.linkedin.com/in/anne-sophie-philippe-52930b211/'} target='_blank'>+ LinkedIn</Link></li>
               </ul>
               <ul className='email'>
-                <li><strong>secretariatlive13@gmail.com</strong></li>
+                <li onClick={handleShowMenu}><Link to={'/contact#ancre'}><strong>secretariatlive13@gmail.com</strong></Link></li>
               </ul>
             </div>
 
