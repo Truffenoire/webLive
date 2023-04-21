@@ -1127,11 +1127,11 @@
             //     display: none;
             // }
 
-            .vignette {
-                // ul {
-                //     padding: 200px;
-                // }
-            }
+            // .vignette {
+            //     // ul {
+            //     //     padding: 200px;
+            //     // }
+            // }
         }
 
         .cards {
@@ -1154,8 +1154,8 @@
             }
 
             .circle {
+                overflow: hidden;
                 .animateCercle {
-                    overflow: hidden;
 
                     // .quatre{
                     //     display: none;
