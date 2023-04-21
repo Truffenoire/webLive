@@ -230,6 +230,7 @@
         }
 
         .circle {
+            overflow: hidden;
             display: flex;
             flex-direction: column;
             position: relative;
@@ -1127,9 +1128,9 @@
             // }
 
             .vignette {
-                ul {
-                    padding: 200px;
-                }
+                // ul {
+                //     padding: 200px;
+                // }
             }
         }
 
