@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/webLive/static/css/main.d7740b6d.css",
-    "main.js": "/webLive/static/js/main.7042da9b.js",
+    "main.css": "/webLive/static/css/main.cdb20318.css",
+    "main.js": "/webLive/static/js/main.30eea9db.js",
     "static/media/movieAccueil.mp4": "/webLive/static/media/movieAccueil.31122fbf6204be4b89cd.mp4",
     "static/media/letter.png": "/webLive/static/media/letter.f74c45cf8cd390223250.png",
     "static/media/enveloppe.png": "/webLive/static/media/enveloppe.8070aa5c0eba976a4f1f.png",
     "static/media/mongol.jpg": "/webLive/static/media/mongol.82a6f096729835f22c10.jpg",
     "static/media/lettreCachet.png": "/webLive/static/media/lettreCachet.398353d1659ce3f89e95.png",
     "static/media/portraitAnne.png": "/webLive/static/media/portraitAnne.2704c6732034d0e4f913.png",
+    "static/media/pig.png": "/webLive/static/media/pig.33bccfe79b07667173c7.png",
     "static/media/5.jpg": "/webLive/static/media/5.b84a4bcfddb14b5758cf.jpg",
     "static/media/timbre2.png": "/webLive/static/media/timbre2.43333ec2682674d3ecba.png",
     "static/media/timbre.png": "/webLive/static/media/timbre.c1bfb9eae285eab19688.png",
@@ -25,11 +26,11 @@
     "static/media/Group1.svg": "/webLive/static/media/Group1.125eb95e6db899669437fcda482c08b4.svg",
     "index.html": "/webLive/index.html",
     "static/media/Group3.svg": "/webLive/static/media/Group3.a31e5aad0c9bda8d3dc21007061c7466.svg",
-    "main.d7740b6d.css.map": "/webLive/static/css/main.d7740b6d.css.map",
-    "main.7042da9b.js.map": "/webLive/static/js/main.7042da9b.js.map"
+    "main.cdb20318.css.map": "/webLive/static/css/main.cdb20318.css.map",
+    "main.30eea9db.js.map": "/webLive/static/js/main.30eea9db.js.map"
   },
   "entrypoints": [
-    "static/css/main.d7740b6d.css",
-    "static/js/main.7042da9b.js"
+    "static/css/main.cdb20318.css",
+    "static/js/main.30eea9db.js"
   ]
 }
