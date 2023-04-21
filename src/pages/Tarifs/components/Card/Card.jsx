@@ -36,15 +36,15 @@ export default function Card() {
 
         cardTL.to([rect, rect1], {
             strokeDashoffset: 0,
-            duration: 2,
-            stagger: 1,
+            duration: 1,
+            stagger: 0.5,
         }).to([div, div1], {
             fill: "#a6cfd5",
             background: '#a6cfd5',
             opacity: 1,
-            stagger: 0.3,
+            stagger: 0.2,
             ease: "ease-in",
-            duration: 1,
+            duration: 0.5,
         })
         .fromTo([div.children[0].children, div.children[1].children, div1.children[0].children, div1.children[1].children], 
         {
@@ -55,7 +55,7 @@ export default function Card() {
             scale: 1,
             ease: 'back',
             opacity: 1,
-            duration: 1,
+            duration: 0.8,
             stagger: 0.2,
         })
     

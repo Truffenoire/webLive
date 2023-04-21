@@ -1,6 +1,14 @@
 // CSS ARROW
+@keyframes bounceArrow {
+    0%{ transform: scale(1 , 1);}
+    20% {transform: scale(1, 1.1);}
+    50% {transform: scale(1, 0.9);}
+    70% {transform: scale(1, 1.1);}
+    100% {transform: scale(1, 1);}
+  }
 .homeContainer {
     .arrow {
+        position: relative;
         height: 200vh;
         width: 100%;
         display: flex;
@@ -11,15 +19,34 @@
 
         .moveArrow {
             transform: translateY(-400px);
-            height: 700px;
+            height: 900px;
+            overflow: visible;
+            // z-index: 10;
+            
+            path:nth-child(1) {
+                &:hover {
+                    animation: bounceArrow 1s ease-in-out;
+                }
+            }
         }
-
-        // .moveArrow path {
-        //     &:hover {
-        //         transform: scale(1.1);
-        //     }
-        // }
-
+        .cash{
+            position: absolute;
+            bottom: 0;
+            opacity: 0.2;
+            left: 0%;
+            img{
+                width: 150px;
+            }
+        }
+        .camenbert{
+            position: absolute;
+            bottom: 10%;
+            opacity: 0.2;
+            left: 80%;
+            img{
+                width: 150px;
+            }
+        }
         .movePlane {
             position: absolute;
             right: 10%;
@@ -30,14 +57,34 @@
             position: absolute;
             left: 10%;
         }
+        .moveStars {
+            opacity: 0.5;
+            position: absolute;
+            right: 0%;
+            bottom: 0%;
+        }
+        .moveSunStars {
+            opacity: 0.5;
+            position: absolute;
+            left: 10%;
+            bottom: 0%;
+        }
     }
 
     // CSS CARDS
     .cards {
+        position: relative;
         height: 200vh;
         background: $color-3 url('../../imgImport/grid.svg') border-box;
-
+        .moveFlyStars {
+            opacity: 0.5;
+            position: absolute;
+            right: 20%;
+            top: 20%;
+        }
         h1 {
+            position: relative;
+            z-index: 1;
             text-transform: uppercase;
             text-shadow:
                 -1px -1px 0 $color-5,
@@ -46,10 +93,19 @@
                 1px 1px 0 $color-5;
             letter-spacing: -5px;
             color: white;
-            font-size: 5rem;
+            font-size: clamp(4rem, 10vw, 5rem);
             margin-left: 10%;
             padding-top: 30%;
             padding-bottom: 5%;
+            .dotGrow{
+                line-height: 0;
+                font-size: clamp(7rem, 30vw, 12rem);
+                text-shadow:
+                -1px -1px 0 $color-5,
+                -2px 2px 0 $color-5,
+                -3px 3px 0 $color-5,
+                -4px 4px 0 $color-5;
+            }
         }
 
         .containCards {
@@ -83,7 +139,20 @@
             #cardDo {
                 transform: translateY(150px);
                 z-index: 1;
-                &::before{
+                position: relative;
+                .pig{
+                    pointer-events: none;
+                    span{
+                        position: absolute;
+                        top: 0%;
+                        font-size: 9rem;
+                        color: white;
+                    }
+                    img{
+                        width: 150px;
+                    }
+                }
+                &::before {
                     content: '';
                     height: 1px;
                     width: 100%;
@@ -92,10 +161,26 @@
                     top: 15px;
                     left: 0;
                 }
+                &::after {
+                    content: '';
+                    height: 10px;
+                    width: 10px;
+                    border-radius: 50%;
+                    border: 1px solid white;
+                    background-color: transparent;
+                    position: absolute;
+                    top: 1px;
+                    left: 95%;
+                }
+
                 &:hover {
                     animation: toUp .3s ease-in-out both;
-                    &::before{
+
+                    &::before {
                         background-color: #66cc99;
+                    }
+                    &::after {
+                        border: 1px solid #66cc99;
                     }
                 }
 
@@ -112,16 +197,25 @@
                 &:hover {
                     animation: toUp2 .3s ease-in-out both;
                 }
-                h2.h2Wow{
+
+                h2.h2Wow {
                     margin-top: -40px;
                 }
+                .hideSmile{
+                    display: flex;
+                    justify-content: space-around;
+                    svg{
+                        width: 100px;
+                    }
+                }
             }
-            
+
             h2.hovered {
+                font-size: clamp(4.3rem, 10vw, 7rem);
                 color: #66cc99;
                 font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
                 letter-spacing: -5px;
-                text-shadow: 
+                text-shadow:
                     -1px 1px 0 white,
                     -1px 1px 0 white,
                     -1px 1px 0 white,
@@ -330,7 +424,7 @@
 //CSS MOVIE
 #movieScreen {
     animation: growUp ease-in-out 0.5s both;
-    
+
     video {
         animation: radFit ease-in 0.5s both;
     }
@@ -355,7 +449,8 @@
         border-radius: 40%;
 
     }
-    .redArrow{
+
+    .redArrow {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -367,7 +462,8 @@
         border-radius: 50%;
         background-color: rgb(241, 113, 107);
         cursor: pointer;
-        .btnArrow{
+
+        .btnArrow {
             width: 80%;
             height: 80%;
             transform-origin: 50% 50%;
@@ -380,10 +476,17 @@
 .posAbH1 {
     font-size: 6rem;
     text-align: center;
-    background-color: $color-2;
+    background-color: $color-1;
+    color: $color-3;
+    text-shadow: 
+    -1px 1px 0 $color-4,
+    1px 1px 0 $color-4,
+    2px 1px 0 $color-4,
+    3px 1px 0 $color-4;
     padding-bottom: 100px;
-    transform: translateY(-500px);
-    background: transparent;
+    transform: translateY(-3px);
+    height: 30vh;
+    // background: transparent;
     text-transform: uppercase;
 }
 
@@ -402,8 +505,9 @@
     }
 
     .vignette {
+        transform: translateY(-3px);
         color: $color-3;
-        background-color: $color-4;
+        background-color: $color-1;
         padding: 5rem;
         display: flex;
         justify-content: center;
@@ -415,8 +519,9 @@
             width: 100%;
             gap: 1vw;
             mix-blend-mode: overlay;
+
             .index0 {
-                top: -75px;
+                top: -55px;
 
                 &:hover {
                     animation: grossi ease-in-out 0.3s both;
@@ -455,12 +560,13 @@
             }
 
             .item {
+                transform-origin: center;
                 position: relative;
                 cursor: none;
                 height: 450px;
                 width: 300px;
                 border: black 1px solid;
-                background-color: $color-3;
+                background-color: $color-6;
                 //clip-path: circle(100px at var(--posX)  var(--posY));
 
                 .text {
@@ -525,18 +631,18 @@
         font-family: ThunderThinHc;
         font-size: 6rem;
         margin: 5rem 0;
-        
+
         span {
             color: $color-3;
             //illusion de text stroke avec une ombre
             text-shadow:
-            -4px -1px 0 #000,
-            1px -1px 0 #000,
-            -1px 1px 0 #000,
-            1px 1px 0 #000;
+                -4px -1px 0 #000,
+                1px -1px 0 #000,
+                -1px 1px 0 #000,
+                1px 1px 0 #000;
         }
     }
-    
+
     p.pTitle {
         font-family: ThunderThinHc;
         font-size: 6rem;
@@ -618,7 +724,7 @@
     h1 {
         margin: 5rem 0;
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        font-size: clamp(10rem, 15vw, 15rem);
+        font-size: clamp(8rem, 18vw, 15rem);
         text-transform: uppercase;
         letter-spacing: -1rem;
         color: $color-1;
@@ -859,25 +965,43 @@
 
 //MEDIA QUERY
 @media (max-width: 1024px) {
-    .homeContainer{
-        #movieScreen{
-            video{
+    .homeContainer {
+        #movieScreen {
+            video {
                 width: 700px;
             }
         }
     }
 }
 
+@media (max-width: 1024px) {
+    .cards {
+        .containCards {
+            #cardDo {
+                width: 80%;
+            }
+            #cardWow {
+                width: 80%;
+            }
+        }
+        }
+    }
 @media (max-width: 768px) {
     .homeContainer {
         .movie {
             display: none;
+            video{
+                display: none;
+            }
         }
 
         .arrow {
             .moveArrow {
                 transform: translateY(-450px);
-                height: 600px;
+                height: 700px;
+            }
+            .moveSunStars{
+                display: none;
             }
         }
 
@@ -885,7 +1009,7 @@
             .containCards {
                 #cardDo {
                     width: 80%;
-                    
+
                     #mouseArrow {
                         display: none;
                     }
@@ -993,11 +1117,16 @@
         }
 
         .vignetteContain {
-            svg.wave {
-                display: none;
+            .posAbH1{
+                font-size: 4rem;
+                height: 10vh;
             }
-            .vignette{
-                ul{
+            // svg.wave {
+            //     display: none;
+            // }
+
+            .vignette {
+                ul {
                     padding: 200px;
                 }
             }
@@ -1008,9 +1137,9 @@
                 #cardDo {
                     width: 90%;
 
-                    h2 {
-                        font-size: 5rem;
-                    }
+                    // h2 {
+                    //     font-size: 5rem;
+                    // }
                 }
 
                 #cardWow {
@@ -1061,7 +1190,7 @@
                 ul {
                     li {
                         svg {
-                            width: 80px;
+                            width: 60px;
                         }
                     }
                 }

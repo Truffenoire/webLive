@@ -1,0 +1,109 @@
+.rgpd {
+    .bannerRgpd {
+        font-size: clamp(1rem, 2vw, 2rem);
+    }
+
+    .protection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h2 {
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            align-self: end;
+            padding: 1rem 5vw;
+            color: $color-4;
+            text-shadow:
+                -1px 1px 0 $color-3,
+                -2px 2px 0 $color-3,
+                -3px 3px 0 $color-3,
+                -4px 4px 0 $color-3,
+                -5px 5px 0 $color-3,
+                -6px 6px 0 $color-3,
+                -7px 7px 0 $color-3;
+        }
+
+        .listOrganisé {
+            display: flex;
+            padding: 2rem;
+            flex-direction: column;
+            justify-content: center;
+            width: 90%;
+            font-size: clamp(1rem, 3vw, 2rem);
+
+            li {
+                color: $color-5;
+                text-shadow:
+                    -1px 1px 0 $color-4,
+                    -2px 2px 0 $color-4,
+                    -3px 3px 0 $color-4,
+                    -4px 4px 0 $color-4;
+                padding: 1rem;
+            }
+
+            .toContact {
+                a {
+                    position: relative;
+                    text-decoration: none;
+                    color: $color-3;
+                    text-shadow:
+                        -1px 1px 0 $color-1,
+                        -2px 2px 0 $color-1,
+                        -3px 3px 0 $color-1,
+                        -4px 4px 0 $color-1;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: -2px;
+                        width: 100%;
+                        height: 1px;
+                        background-color: $color-3;
+                        transform: scaleX(0);
+                        transform-origin: center;
+                        box-shadow:
+                        -1px 1px 0 $color-1,
+                        -2px 2px 0 $color-1,
+                        -3px 3px 0 $color-1,
+                        -4px 4px 0 $color-1;
+                        
+                    }
+                    
+                    &:hover {
+                        &::after {
+                            animation: bounce 0.8s ease both;
+                        }
+                    }
+                }
+            }
+
+            div ul li {
+                color: $color-1;
+                text-shadow: none;
+                // 1px -1px 0 $color-5,
+                // -1px 1px 0 $color-5,
+                // -2px 2px 0 $color-5,
+                // -3px 3px 0 $color-5;
+            }
+        }
+
+        div h5 {
+            font-size: clamp(1rem, 3vw, 2.5rem);
+            color: $color-3;
+            text-shadow:
+                1px -1px 0 $color-4,
+                -1px 1px 0 $color-4,
+                -2px 2px 0 $color-4,
+                -3px 3px 0 $color-4;
+        }
+    }
+}
+
+@keyframes bounce {
+    0%{ transform: scaleX(0); }
+    25%{transform: scaleX(1.1); }
+    50% { transform: scaleX(0.9); }
+    75%{ transform: scaleX(1.1); }
+    100% { transform: scaleX(1); }
+  }

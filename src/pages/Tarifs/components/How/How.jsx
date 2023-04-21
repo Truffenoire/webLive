@@ -140,6 +140,7 @@ export default function How() {
 
     return (
         <div className='how'>
+            <h1>Comment ça se passe ?</h1>
             <ul className='howList'>
                 <li data-id='0' onMouseLeave={handleMouseLeave} onMouseOver={handleMouseEnter} className='liList'>
                     <div className='number'>
@@ -162,7 +163,7 @@ export default function How() {
                         <li>Mail</li>
                         <li>Téléphone</li>
                         <li>Visio-conférence</li>
-                        <li>rendez-vous</li>
+                        <li>Rendez-vous</li>
                     </ul>
                 </div>
                 <li data-id='1' onMouseLeave={handleMouseLeave} onMouseEnter={handleMouseEnter} className='liList'>
@@ -221,9 +222,9 @@ export default function How() {
                     <div className='title'></div>
                     <div onClick={handleClick} className='btn'>+</div>
                 </li>
-                <div className='hide'>Certain chefs d'entreprises sont très à l'aise avec les nouvelles technoligies, d'autres beaucoup moins.
-                    <br />je m'adapte à vos outils et connaissances afin d'être le <span>+</span> efficace possible.
-                    Les chefs d'entreprise étant enormément solicités, il est promordial d'être réactive à leur demandes. <br />
+                <div className='hide'>Certains chefs d'entreprises sont très à l'aise avec les nouvelles technologies, d'autres beaucoup moins.
+                    <br />Je m'adapte à vos outils et connaissances afin d'être le <span>+</span> efficace possible.
+                    Les chefs d'entreprises étant enormément solicités, il est promordial d'être réactive à leur demandes. <br />
                     La transmition d'informations est essentielle à cette réactivité.
                 </div>
             </ul>

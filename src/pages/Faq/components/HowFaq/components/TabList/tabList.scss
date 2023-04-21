@@ -1,6 +1,14 @@
 .tabList {
     padding: 3vw;
-
+    h1{
+        padding: 1rem;
+        color: $color-4;
+        text-shadow:
+                -1px 1px 0 $color-1,
+                1px 1px 0 $color-1,
+                2px 1px 0 $color-1,
+                3px 1px 0 $color-1;
+    }
     li {
         font-size: clamp(1.2rem, 2vw, 2rem);
         padding: 0.5rem;

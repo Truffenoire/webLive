@@ -35,7 +35,7 @@ export default function NavBar({ isCharged, setIsCharged }) {
     setShowMenu(!showMenu)
     setShowSousMenu(false)
     setIsCharged(!isCharged)
-
+    console.log(isCharged);
 
   }
   const handleSousMenu = () => {

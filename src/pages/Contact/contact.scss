@@ -60,7 +60,7 @@
 
     .whatsContact {
         position: relative;
-        z-index: 10;
+        // z-index: 10;
         display: flex;
         background: transparent;
         justify-content: space-around;
@@ -74,12 +74,13 @@
 
         .containTxt {
             .call {
+                font-size: clamp(1.8rem, 3vw, 2rem);
                 text-transform: uppercase;
                 font-weight: 800;
                 letter-spacing: 2px;
 
                 span {
-                    font-size: 1.8rem;
+                    font-size: clamp(1.8rem, 3vw, 2rem);
                     color: $color-4;
                     text-shadow: 
                     -1px 1px 0 white,
@@ -123,7 +124,7 @@
         }
 
         svg#calque_1 {
-            z-index: 10;
+            // z-index: 10;
             grid-row: 2/2;
             position: absolute;
         }
@@ -138,7 +139,7 @@
             text-transform: uppercase;
             color: white;
             position: relative;
-            z-index: 10;
+            // z-index: 10;
             font-weight: 800;
             height: 500px;
             display: flex;

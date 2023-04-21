@@ -41,14 +41,14 @@ export default function Hey() {
                         <h3>Le mot clé : <span>déléguez !</span></h3>
                         <p>
                             Je m'appelle Anne-Sophie et je suis là pour vous aider, vous assister. <br />
-                            laissez moi la pleine gestion de votre administratif, <br />
+                            Laissez moi la pleine gestion de votre administratif, <br />
                             Exit la charge mentale.
                         </p>
                     </li>
                     <li>
                         <h3>Le mot clé : <span>économisez !</span></h3>
                         <p>
-                            Je travaille à mon compte et fait souvent le même 'taf' qu'un salarié : secretariat et gestion administrative. <br />
+                            Je travaille à mon compte et fait souvent le même travail qu'un salarié : secrétariat et gestion administrative. <br />
                             Ce qui change ? Pas de salaire, <span>mais</span> une facture de prestation de service.
                         </p>
                     </li>
@@ -58,7 +58,7 @@ export default function Hey() {
                             Ce qui me differencie ? <br />
                             Ma bienveillance, mon côté humain.<br />
                             Je suis à l'écoute de vos besoins, polyvalante et disponible. <br />
-                            Laissez moi me mettre en relation avec vos comptables, avocats, fournisseurs et même clients. <br />
+                            Laissez moi me mettre en relation avec vos comptables, avocats, fournisseurs et même vos clients. <br />
                             Je vais vous faciliter la tâche.
                         </p>
                     </li>

@@ -33,14 +33,15 @@ export default function TabList() {
 
   return (
     <div className='tabList'>
+      <h1>Coût d'un salarié :</h1>
       <ul>
         <li><span>RECRUTEMENT :</span> temps passé à la réalisation des annonces, le traitement des CV, les frais liés à l’intégration du salarié… Difficilement calculable, mais un gros budget tout de même</li>
         <li><span>IMMOBILIER :</span> un espace de travail adapté et aux normes</li>
         <li><span>MOBILIER, FOURNITURES :</span> consommables, internet, bureau, matériel informatique professionnel…</li>
         <li><span>FORMATION :</span> l’absence et le coût que cela engendre</li>
-        <li>13EME MOIS</li>
-        <li>TICKETS RESTAURANT</li>
-        <li>INTERESSEMENT...</li>
+        <li>13ème mois</li>
+        <li>Tickets restaurant</li>
+        <li>Interessement...</li>
       </ul>
       <div className='exit'>
         <ul className='salaire'>

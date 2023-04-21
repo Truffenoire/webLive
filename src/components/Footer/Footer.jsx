@@ -22,9 +22,10 @@ function Footer({ isCharged, setIsCharged }) {
     const h1Ref = useRef(null)
 
     useEffect(() => {
+        const h1Animate = h1Ref.current.children
         const footTL = gsap.timeline();
 
-        footTL.to('.h1Anim span', {
+        footTL.to(h1Animate, {
             y: 0,
             color: '#a6cfd5',
             duration: 0.8,
@@ -103,7 +104,7 @@ function Footer({ isCharged, setIsCharged }) {
                 </ul>
                 <div className="mention">
                     Mentions légales <br />
-                    CGV et RGPD
+                    <Link to={'/RGPD#ancre'}>CGV et RGPD</Link>
                 </div>
             </div>
             <div className="reseau">

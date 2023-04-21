@@ -29,11 +29,10 @@ export default function Contact() {
     // -------
     const [isSended, setIsSended] = useState(false)
     const form = useRef();
-
     const sendEmail = data => {
         // e.preventDefault();
-        console.log('useForm', data);
-        console.log('useRef', form.current);
+        // console.log('useForm', data);
+        // console.log('useRef', form.current);
         setIsSended(true)
         emailjs.sendForm('service_wqic8du', 'template_q9ohhdd', form.current, 'zJihS0iRqjWy0B2fw')
             .then((result) => {

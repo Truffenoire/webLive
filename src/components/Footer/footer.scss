@@ -6,7 +6,7 @@ footer {
     h1 {
         padding: 4rem;
         text-align: center;
-        font-size: clamp(3rem, 16vw, 16rem);
+        font-size: clamp(2rem, 14vw, 16rem);
         color: $color-5;
         overflow: hidden;
 
@@ -37,6 +37,10 @@ footer {
         .mention {
             grid-column: 4;
             text-align: center;
+            a{
+                text-decoration: none;
+                color: $color-3;
+            }
         }
     }
 

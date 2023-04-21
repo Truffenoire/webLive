@@ -131,8 +131,8 @@ export default function Entreprise() {
     return (
         <div className='entreprise'>
             <div className="gestion">
-                <span className='spanGestion'>Gestion de&nbsp;Gestion de&nbsp;Gestion de&nbsp;Gestion de&nbsp;Gestion de&nbsp;Gestion de&nbsp;</span>
-                <span className='spanGestion'>Gestion de&nbsp;Gestion de&nbsp;Gestion de&nbsp;Gestion de&nbsp;Gestion de&nbsp;Gestion de&nbsp;</span>
+                <span className='spanGestion'>Gestion de &nbsp; Gestion de &nbsp; Gestion de &nbsp; Gestion de &nbsp; Gestion de &nbsp; Gestion de &nbsp; </span>
+                <span className='spanGestion'>Gestion de &nbsp; Gestion de &nbsp; Gestion de &nbsp; Gestion de &nbsp; Gestion de &nbsp; Gestion de &nbsp; </span>
             </div>
             <div className="gestionEtsList">
                 <h1 className='title'>
@@ -154,18 +154,18 @@ export default function Entreprise() {
                     <li className='liAnim'><span className='txtAnim'><strong className='sizeUp'>Relance impayés</strong></span></li>
                     <li className='liAnim'><span className='txtAnim'>Tableau de suivi des <strong className='color sizeDown'>dépenses</strong></span></li>
                     <li className='liAnim'><span className='txtAnim'>Commandes <strong className='color sizeUp'>fournisseurs</strong></span></li>
-                    <li className='liAnim'><span className='txtAnim'>Classeurs de chantiers documents,<br/> affichages obligatoires</span></li>
+                    <li className='liAnim'><span className='txtAnim'>Classeurs de chantiers, documents,<br/> affichages obligatoires</span></li>
                     <li className='liAnim'><span className='txtAnim'><strong className='color'>Gestion</strong><strong className='sizeUp'> flotte </strong><strong className='color'>automobile</strong></span></li>
                     <li className='liAnim'><span className='txtAnim'><strong className='color sizeUp'>Démarches</strong><strong className='sizeDown'> Administratives</strong></span></li>
-                    <li className='liAnim'><span className='txtAnim'>Organisations de <strong className='color'>réunions</strong></span></li>
+                    <li className='liAnim'><span className='txtAnim'>Organisation de <strong className='color'>réunions</strong></span></li>
                     <li className='liAnim'><span className='txtAnim'><strong className='color'>Gestion de la communication interne et externe</strong></span></li>
                     <li className='liAnim'><span className='txtAnim'><strong className='sizeDown'>Créations</strong> de cartes de voeux, plaquettes, flyers</span></li>
                     <li className='liAnim'><span className='txtAnim'>Création contenu <strong className='color'>FB Instagram Linked'in</strong></span></li>
                 </ul>
             </div>
             <div className="gestion">
-                <span className='spanGestion'>Gestion du&nbsp;Gestion du&nbsp;Gestion du&nbsp;Gestion du&nbsp;Gestion du&nbsp;Gestion du&nbsp;</span>
-                <span className='spanGestion'>Gestion du&nbsp;Gestion du&nbsp;Gestion du&nbsp;Gestion du&nbsp;Gestion du&nbsp;Gestion du&nbsp;</span>
+                <span className='spanGestion'>Gestion du &nbsp; Gestion du &nbsp; Gestion du &nbsp; Gestion du &nbsp; Gestion du &nbsp; Gestion du &nbsp; </span>
+                <span className='spanGestion'>Gestion du &nbsp; Gestion du &nbsp; Gestion du &nbsp; Gestion du &nbsp; Gestion du &nbsp; Gestion du &nbsp; </span>
             </div>
             <div className="gestionPersList">
                 <h1 className='titleAnim'>Personnel</h1>
@@ -181,8 +181,8 @@ export default function Entreprise() {
                 </ul>
             </div>
             <div className="gestion">
-                <span className='spanGestion'>Gestion&nbsp;Gestion&nbsp;Gestion&nbsp;Gestion&nbsp;Gestion&nbsp;Gestion&nbsp;Gestion&nbsp;Gestion&nbsp;</span>
-                <span className='spanGestion'>Gestion&nbsp;Gestion&nbsp;Gestion&nbsp;Gestion&nbsp;Gestion&nbsp;Gestion&nbsp;Gestion&nbsp;Gestion&nbsp;</span>
+                <span className='spanGestion'>Gestion &nbsp; Gestion &nbsp; Gestion &nbsp; Gestion &nbsp; Gestion &nbsp; Gestion &nbsp; Gestion &nbsp; Gestion &nbsp; </span>
+                <span className='spanGestion'>Gestion &nbsp; Gestion &nbsp; Gestion &nbsp; Gestion &nbsp; Gestion &nbsp; Gestion &nbsp; Gestion &nbsp; Gestion &nbsp; </span>
             </div>
             <div className="gestionAdList">
                 <h1 className='titleAnim2'>Administrative</h1>

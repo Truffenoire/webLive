@@ -77,12 +77,12 @@ useEffect(() => {
         <ul className="serviceList">
           <li className='liAnim'><span className='txtAnim'> <strong className='color'>Lettres</strong> personnelles, professionnelles</span></li>
           <li className='liAnim'><span className='txtAnim'> Cv <strong className='italic'>lettres de motivation</strong>, demission, disponibilité</span></li>
-          <li className='liAnim'><span className='txtAnim'> <strong className="sizeDown"> Courriers et gestion des dossiers <br/> CAF SECU Pole emploi</strong> <strong className='color'>lettre de reclamation</strong></span></li>
+          <li className='liAnim'><span className='txtAnim'> <strong className="sizeDown"> Courriers et gestion des dossiers <br/> CAF SECU Pole emploi</strong> <strong className='color'>lettres de reclamation</strong></span></li>
           <li className='liAnim'><span className='txtAnim'> <strong className='color'>Recommandés</strong> ou envoi de courriers</span></li>
           <li className='liAnim'><span className='txtAnim'> <strong className='italic'>Changement d'adresse</strong></span></li>
           <li className='liAnim'><span className='txtAnim'> Organisation de votre boîte <strong className='color'>mail</strong></span></li>
           <li className='liAnim'><span className='txtAnim'> Reservation ou organisation de vos <br/> vacances ou évenements privés</span></li>
-          <li className='liAnim'><span className='txtAnim'> <strong className='color'>Commandes de cadeaux fete des mères,<br/> anniversaires</strong></span></li>
+          <li className='liAnim'><span className='txtAnim'> <strong className='color'>Commandes de cadeaux fête des mères,<br/> anniversaires</strong></span></li>
           <li className='liAnim'><span className='txtAnim'> tri optimal <strong className='italic'>système d'archivage classement informatique</strong></span></li>
         </ul>
         <h2 id='more'>ETC...</h2>
