@@ -18,7 +18,7 @@ export default function NavBar({ isCharged, setIsCharged }) {
   const [hideMenu, setHideMenu] = useState(false)
   const [showMenu, setShowMenu] = useState(true)
   const [showSousMenu, setShowSousMenu] = useState(false)
-  
+
 
   const handleMenu = (e) => {
     e.preventDefault()
@@ -63,76 +63,73 @@ export default function NavBar({ isCharged, setIsCharged }) {
   }, []);
 
   return (
-
-    <div className='navBarContainer'>
-      {/* <div id='ancre' className='logoContainer'><img src={Logo} alt="logo" /> */}
-      <div id='ancre' className='headerContainer'>
-        <ul>
-          <li><Link to={'/#ancre'}>Secrétariat Live</Link></li>
-          <li id='contentWord'></li>
-          <li className='animate'>
-            <animated.div style={{
-              rotate: x.to({
-                range: [0, 1],
-                output: [0, 360]
-              }),
-              opacity: x.to({
-                range: [0, .25, .5, 1],
-                output: [1, 0.2, 0.2, 1]
-              })
-            }}>
-              {!on ? <img src={Cool} alt='cool emoji' /> : <img src={Dead} alt="dead emoji" />}
-            </animated.div>
-          </li>
-        </ul>
-        {/* <div onClick={handleMovie} id={toggleMovie ? 'movieScreen' : ''} className="movie">
-          <video autostart muted loop autoPlay src={movieAccueil}></video>
-        </div> */}
+    <>
+      <div className='navBarContainer'>
+        <div id='ancre' className='headerContainer'>
+          <ul>
+            <li><Link to={'/#ancre'}>Secrétariat Live</Link></li>
+            <li id='contentWord'></li>
+            <li className='animate'>
+              <animated.div style={{
+                rotate: x.to({
+                  range: [0, 1],
+                  output: [0, 360]
+                }),
+                opacity: x.to({
+                  range: [0, .25, .5, 1],
+                  output: [1, 0.2, 0.2, 1]
+                })
+              }}>
+                {!on ? <img src={Cool} alt='cool emoji' /> : <img src={Dead} alt="dead emoji" />}
+              </animated.div>
+            </li>
+          </ul>
+        </div>
       </div>
-      <button ref={refBtnMenu} className='btnMenu' onClick={handleMenu}> MENU </button>
-      {hideMenu ?
-        <nav className='nav'>
-          <div className='imgLogo'>
-            <div className='menuFooter'>
-              <img src={Logo} alt="logo" />
-              <ul className='lienReseau'>
-                <li><Link to={'https://www.instagram.com/secretariatlive/'}  target='_blank' >+ Instagram</Link></li>
-                <li><Link to={'https://www.facebook.com/Secretariatlive'} target='_blank'>+ FaceBook</Link></li>
-                <li><Link to={'https://www.linkedin.com/in/anne-sophie-philippe-52930b211/'} target='_blank'>+ LinkedIn</Link></li>
+        {hideMenu ?
+          <nav className='nav'>
+            <div className='imgLogo'>
+              <div className='menuFooter'>
+                <img src={Logo} alt="logo" />
+                <ul className='lienReseau'>
+                  <li><Link to={'https://www.instagram.com/secretariatlive/'} target='_blank' >+ Instagram</Link></li>
+                  <li><Link to={'https://www.facebook.com/Secretariatlive'} target='_blank'>+ FaceBook</Link></li>
+                  <li><Link to={'https://www.linkedin.com/in/anne-sophie-philippe-52930b211/'} target='_blank'>+ LinkedIn</Link></li>
+                </ul>
+                <ul className='email'>
+                  <li onClick={handleShowMenu}><Link to={'/contact#ancre'}><strong>secretariatlive13@gmail.com</strong></Link></li>
+                </ul>
+              </div>
+
+              <ul className='menuLink'>
+                {/* JE PEUX PASSER UNE FONCTION QUI FAIT DEUX CHOSES */}
+                <li onClick={handleShowMenu}><Link to={'/#ancre'} >ACCUEIL</Link></li>
+                <li><Link onClick={handleSousMenu}>SERVICES</Link></li>
+                {showSousMenu &&
+
+                  <div id={`${showSousMenu && "growUp"}`}>
+                    <ul>
+                      <li onClick={handleShowMenu}><Link to={'/entreprise#ancre'}>Entreprises</Link></li>
+                      <li onClick={handleShowMenu}><Link to={'/particulier#ancre'}>Particuliers</Link></li>
+                    </ul>
+                  </div>
+
+
+                }
+                <li onClick={handleShowMenu}><Link to={'/tarifs#ancre'}>TARIFS</Link></li>
+                <li onClick={handleShowMenu}><Link to={'/contact#ancre'}>CONTACT</Link></li>
+                <li onClick={handleShowMenu}><Link to={'/faq#ancre'}>FAQ</Link></li>
               </ul>
-              <ul className='email'>
-                <li onClick={handleShowMenu}><Link to={'/contact#ancre'}><strong>secretariatlive13@gmail.com</strong></Link></li>
-              </ul>
+              <button className='closeMenu' onClick={handleShowMenu}>< AiFillCloseCircle /></button>
             </div>
+          </nav>
 
-            <ul className='menuLink'>
-              {/* JE PEUX PASSER UNE FONCTION QUI FAIT DEUX CHOSES */}
-              <li onClick={handleShowMenu}><Link to={'/#ancre'} >ACCUEIL</Link></li>
-              <li><Link onClick={handleSousMenu}>SERVICES</Link></li>
-              {showSousMenu &&
+          :
 
-                <div id={`${showSousMenu && "growUp"}`}>
-                  <ul>
-                    <li onClick={handleShowMenu}><Link to={'/entreprise#ancre'}>Entreprises</Link></li>
-                    <li onClick={handleShowMenu}><Link to={'/particulier#ancre'}>Particuliers</Link></li>
-                  </ul>
-                </div>
+          null
+        }
+      <button ref={refBtnMenu} className='btnMenu' onClick={handleMenu}> MENU </button>
 
-
-              }
-              <li onClick={handleShowMenu}><Link to={'/tarifs#ancre'}>TARIFS</Link></li>
-              <li onClick={handleShowMenu}><Link to={'/contact#ancre'}>CONTACT</Link></li>
-              <li onClick={handleShowMenu}><Link to={'/faq#ancre'}>FAQ</Link></li>
-            </ul>
-            <button className='closeMenu' onClick={handleShowMenu}>< AiFillCloseCircle /></button>
-          </div>
-        </nav>
-
-        :
-
-        null
-      }
-    </div>
-
+    </>
   )
 }

@@ -1,12 +1,33 @@
 @import '../../styles/colors.scss';
 
+.btnMenu {
+    position: fixed;
+    cursor: pointer;
+    right: 50px;
+    top: 30px;
+    letter-spacing: -5px;
+    z-index: 1000!important;
+    font-size: 50px;
+    color: $color-6;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    font-family: 'Open Sans';
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+
+
+    &:hover {
+        animation: scaleUp 0.4s ease-in-out both;
+    }
+}
 .navBarContainer {
     position: relative;
     display: flex;
     justify-content: center;
     height: 75vh;
     background-color: $color-1;
-    z-index: 10;
+    z-index: 1;
 
     .logoContainer img {
         width: 170px;
@@ -62,160 +83,140 @@
         }
     }
 
-    .btnMenu {
-        position: fixed;
-        cursor: pointer;
-        right: 50px;
-        top: 30px;
-        letter-spacing: -5px;
-        z-index: 1000;
-        font-size: 50px;
-        color: $color-6;
-        outline: none;
-        background-color: transparent;
-        border: none;
-        text-decoration: underline;
-        font-family: 'Open Sans';
-        text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    
 
+}
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: $color-4;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    z-index: 10000!important;
 
-        &:hover {
-            animation: scaleUp 0.4s ease-in-out both;
-        }
-    }
-
-    .nav {
+    .imgLogo {
+        // position: fixed;
+        height: 80%;
+        width: 80%;
+        background-color: $color-3;
         display: flex;
-        justify-content: center;
+        // flex-direction: column;
+        gap: 20px;
+        justify-content: space-between;
         align-items: center;
-        height: 100vh;
-        width: 100%;
-        background-color: $color-4;
-        position: fixed;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        left: 50%;
-        z-index: 1000;
 
-        .imgLogo {
-            // position: fixed;
-            height: 80%;
-            width: 80%;
-            background-color: $color-3;
+        .menuFooter {
             display: flex;
-            // flex-direction: column;
-            gap: 20px;
+            height: 100%;
+            flex-direction: column;
+            align-items: baseline;
             justify-content: space-between;
-            align-items: center;
 
-            .menuFooter {
-                display: flex;
-                height: 100%;
-                flex-direction: column;
-                align-items: baseline;
-                justify-content: space-between;
-
-                img {
-                    margin: 1rem;
-                    align-self: baseline;
-                }
-            }
-
-            .menuLink {
-                display: flex;
-                flex-direction: column;
-                height: 100%;
-                width: 30%;
-                justify-content: space-evenly;
-                padding: 100px 0;
-
-                div#growUp {
-                    ul {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        background-color: $color-4;
-                        position: absolute;
-                        // width: 50%;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        animation: growToAll .5s ease-in-out both;
-                        text-transform: uppercase;
-                    }
-                }
-
-                li {
-                    list-style-type: none;
-                    width: max-content;
-                    color: black;
-
-                    &:hover {
-                        animation: scaleUp 0.5s ease-in-out both;
-                        text-decoration: underline 5px;
-                    }
-
-                    a {
-                        color: $color-1;
-                        font-family: 'Kanit';
-                        font-weight: 800;
-                        font-size: 5rem;
-                    }
-                }
-            }
-
-            .lienReseau {
-                padding-left: 35px;
-                height: 15px;
-
-                li {
-                    list-style-type: none;
-                    cursor: pointer;
-                    line-height: 30px;
-                    width: max-content;
-                    color: black;
-                    text-decoration: underline;
-
-                    a {
-                        text-decoration: none;
-                        color: black;
-                        font-size: clamp(1rem, 2vw, 22px);
-                        font-weight: 800;
-                    }
-                }
-            }
-
-            .email {
-                padding-left: 35px;
-                height: 100px;
-
-                li {
-                    list-style-type: none;
-                    cursor: pointer;
-                    line-height: 30px;
-                    width: max-content;
-                    color: black;
-                    text-decoration: underline;
-                    a{
-                        text-decoration: none;
-                        color: black;
-                    }
-                }
-            }
-
-            .closeMenu {
-                cursor: pointer;
-                font-size: 80px;
-                color: $color-1;
-                height: 80px;
-                outline: none;
-                background-color: transparent;
-                border: none;
-                align-self: flex-start;
+            img {
                 margin: 1rem;
+                align-self: baseline;
+            }
+        }
+
+        .menuLink {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 30%;
+            justify-content: space-evenly;
+            padding: 100px 0;
+
+            div#growUp {
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    background-color: $color-4;
+                    position: absolute;
+                    // width: 50%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    animation: growToAll .5s ease-in-out both;
+                    text-transform: uppercase;
+                }
+            }
+
+            li {
+                list-style-type: none;
+                width: max-content;
+                color: black;
 
                 &:hover {
-                    animation: rotate 0.5s ease-in-out both;
+                    animation: scaleUp 0.5s ease-in-out both;
+                    text-decoration: underline 5px;
                 }
+
+                a {
+                    color: $color-1;
+                    font-family: 'Kanit';
+                    font-weight: 800;
+                    font-size: 5rem;
+                }
+            }
+        }
+
+        .lienReseau {
+            padding-left: 35px;
+            height: 15px;
+
+            li {
+                list-style-type: none;
+                cursor: pointer;
+                line-height: 30px;
+                width: max-content;
+                color: black;
+                text-decoration: underline;
+
+                a {
+                    text-decoration: none;
+                    color: black;
+                    font-size: clamp(1rem, 2vw, 22px);
+                    font-weight: 800;
+                }
+            }
+        }
+
+        .email {
+            padding-left: 35px;
+            height: 100px;
+
+            li {
+                list-style-type: none;
+                cursor: pointer;
+                line-height: 30px;
+                width: max-content;
+                color: black;
+                text-decoration: underline;
+                a{
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+        }
+
+        .closeMenu {
+            cursor: pointer;
+            font-size: 80px;
+            color: $color-1;
+            height: 80px;
+            outline: none;
+            background-color: transparent;
+            border: none;
+            align-self: flex-start;
+            margin: 1rem;
+
+            &:hover {
+                animation: rotate 0.5s ease-in-out both;
             }
         }
     }
@@ -309,18 +310,18 @@
             }
         }
 
-        .nav{
-            .imgLogo{
-                .menuLink{
-                    #growUp{
-                        ul{
-                            left: 10%;
-                        }
+    }
+    .nav{
+        .imgLogo{
+            .menuLink{
+                #growUp{
+                    ul{
+                        left: 10%;
                     }
-                    li{
-                        a{
-                            font-size: 4rem;
-                        }
+                }
+                li{
+                    a{
+                        font-size: 4rem;
                     }
                 }
             }
@@ -334,34 +335,34 @@
                 flex-direction: column;
             }
         }
-        .nav{
-            .imgLogo{
-                width: 95%;
-                .menuFooter{
-                    img{
-                        width: 100px;
-                    }
-                    .lienReseau{
-                        padding-left: 15px;
+    }
+    .nav{
+        .imgLogo{
+            width: 95%;
+            .menuFooter{
+                img{
+                    width: 100px;
+                }
+                .lienReseau{
+                    padding-left: 15px;
+                }
+            }
+            .menuLink{
+                width: 0;
+                #growUp{
+                    ul{
+                        left: -25%;
                     }
                 }
-                .menuLink{
-                    width: 0;
-                    #growUp{
-                        ul{
-                            left: -25%;
-                        }
-                    }
-                    li{
-                        a{
-                            font-size: 1.3rem;
-                        }
+                li{
+                    a{
+                        font-size: 1.3rem;
                     }
                 }
-                .closeMenu{
-                    svg{
-                        width: 50px;
-                    }
+            }
+            .closeMenu{
+                svg{
+                    width: 50px;
                 }
             }
         }
