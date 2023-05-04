@@ -10,7 +10,7 @@
     }
 
     strong.titleUp {
-        font-size: 16rem;
+        font-size: clamp(1rem, 18vw, 15rem);
     }
 
     strong.sizeDown {
@@ -43,8 +43,7 @@
         overflow: hidden;
 
         .title {
-            // position: relative;
-            font-size: 12rem;
+            font-size: clamp(1rem, 15vw, 12rem);
             color: white;
             text-shadow:
                 -8px -0px 0 $color-1,
@@ -70,7 +69,7 @@
                 overflow: hidden;
                 white-space: nowrap;
                 height: 150px;
-                font-size: 3.5rem;
+                font-size: clamp(1.3rem, 4vw, 3.5rem);
 
                 // border: 1px solid black;
                 span {
@@ -92,10 +91,9 @@
         h2#more {
             background-color: $color-3;
             text-align: center;
-            font-size: 10rem;
+            font-size: clamp(6rem, 20vw, 10rem);
             padding-top: 100px;
             color: white;
-            // -webkit-text-stroke: 1px $color-1;
             text-shadow:
                 -8px 4px 0 $color-1,
                 1px -0px 0 $color-1,
@@ -172,40 +170,30 @@
     .particulier{
         .service{
             .title{
-                font-size: 6rem;
                 text-shadow:
                 -1px 1px 0 $color-1,
                 1px -0px 0 $color-1,
                 -1px 1px 0 $color-1,
                 -1px 1px 0 $color-1;
-                strong{
-                    font-size: 6rem;
-                }
             }
-            ul.serviceList {
-                .liAnim {
-                    height: 100px;
-                    font-size: 1.8rem;
+            // ul.serviceList {
+            //     .liAnim {
+            //         height: 100px;
+            //         font-size: 1.8rem;
         
-                    .txtAnim {        
-                        strong {
-                            font-size: 1.6rem;
-                        }
-                    }
-                }
-            }
+            //         .txtAnim {        
+            //             strong {
+            //                 font-size: 1.6rem;
+            //             }
+            //         }
+            //     }
+            // }
         }
     }
 }
 @media (max-width: 425px) {
     .particulier{
         .service{
-            .title{
-                font-size: 3.2rem;
-                strong{
-                    font-size: 4rem;
-                }
-            }
             ul.serviceList {
                 .liAnim {
                     height: 100px;

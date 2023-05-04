@@ -22,7 +22,7 @@ export default function Arrow() {
     }, [])
     useEffect(() => {
         gsap.to('.movePlane', {
-            y: 800,
+            y: 300,
             x: -500,
             scrollTrigger: {
                 trigger: ".arrow",

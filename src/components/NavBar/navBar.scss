@@ -150,17 +150,17 @@
                 list-style-type: none;
                 width: max-content;
                 color: black;
-
+                
                 &:hover {
                     animation: scaleUp 0.5s ease-in-out both;
                     text-decoration: underline 5px;
                 }
-
+                
                 a {
                     color: $color-1;
                     font-family: 'Kanit';
                     font-weight: 800;
-                    font-size: 5rem;
+                    font-size: clamp(1.3rem, 5vw, 4.2rem);
                 }
             }
         }
@@ -319,11 +319,6 @@
                         left: 10%;
                     }
                 }
-                li{
-                    a{
-                        font-size: 4rem;
-                    }
-                }
             }
         }
     }
@@ -352,11 +347,6 @@
                 #growUp{
                     ul{
                         left: -25%;
-                    }
-                }
-                li{
-                    a{
-                        font-size: 1.3rem;
                     }
                 }
             }

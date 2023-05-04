@@ -32,6 +32,7 @@
             font-size: clamp(1rem, 3vw, 2rem);
 
             li {
+                font-family: impact;
                 color: $color-5;
                 text-shadow:
                     -1px 1px 0 $color-4,
@@ -89,6 +90,7 @@
         }
 
         div h5 {
+            font-family: impact;
             font-size: clamp(1rem, 3vw, 2.5rem);
             color: $color-3;
             text-shadow:

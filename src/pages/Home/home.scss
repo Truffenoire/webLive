@@ -19,7 +19,7 @@
 
         .moveArrow {
             transform: translateY(-400px);
-            height: 900px;
+            height: clamp(700px, 30vw, 900px);
             overflow: visible;
             // z-index: 10;
             
@@ -58,12 +58,14 @@
             left: 10%;
         }
         .moveStars {
+            width: clamp(150px, 20vw, 250px);
             opacity: 0.5;
             position: absolute;
             right: 0%;
             bottom: 0%;
         }
         .moveSunStars {
+            width: clamp(150px, 23vw, 300px);
             opacity: 0.5;
             position: absolute;
             left: 10%;
@@ -312,41 +314,43 @@
             .bulleTxt1 {
                 position: absolute;
                 right: 5%;
-                width: 150px;
-                height: 150px;
+                width: clamp(130px, 10vw, 150px);
+                height: clamp(130px, 10vw, 150px);
                 border-radius: 50%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 text-align: center;
-                padding: 1rem;
+                padding: clamp(0.5rem, 2vw, 1rem);
                 background: linear-gradient(-145deg, $color-6 0%, $color-3 100%);
                 z-index: 200;
-                font-size: 1.5rem;
+                font-size: clamp(1.2rem, 2vw, 1.5rem);
             }
 
             .bulleTxt2 {
                 position: absolute;
                 right: 10%;
                 top: 40%;
-                width: 250px;
-                height: 200px;
+                width: clamp(200px, 15vw, 250px);
+                height: clamp(150px, 15vw, 200px);
                 border-radius: 30%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 text-align: center;
-                padding: 1rem;
+                padding: clamp(0.5rem, 2vw, 1rem);
                 color: white;
                 background: linear-gradient(145deg, #404e5c 30%, #a6cfd5 100%);
                 z-index: 200;
-                font-size: 1.5rem;
+                font-size: clamp(1.2rem, 2vw, 1.5rem);
             }
 
             .bulleTxt3 {
                 position: absolute;
                 right: 30%;
                 top: 60%;
+                width: clamp(130px, 10vw, 200px);
+                height: clamp(130px, 10vw, 150px);
                 width: 200px;
                 height: 190px;
                 border-radius: 45%;
@@ -354,16 +358,18 @@
                 justify-content: center;
                 align-items: center;
                 text-align: center;
-                padding: 1rem;
+                padding: clamp(0.5rem, 2vw, 1rem);
                 background: linear-gradient(-145deg, #f6f2f2ca 30%, #a6cfd5 100%);
                 z-index: 200;
-                font-size: 1.5rem;
+                font-size: clamp(1.2rem, 2vw, 1.5rem);
             }
 
             .bulleTxt4 {
                 position: absolute;
                 left: 20%;
                 top: 20%;
+                width: clamp(130px, 10vw, 200px);
+                height: clamp(130px, 10vw, 150px);
                 width: 170px;
                 height: 170px;
                 border-radius: 50%;
@@ -371,50 +377,49 @@
                 justify-content: center;
                 align-items: center;
                 text-align: center;
-                padding: 1rem;
+                padding: clamp(0.5rem, 2vw, 1rem);
                 color: white;
                 // background: linear-gradient(90deg, #404e5c 30%, #a6cfd5 100%);
                 background: radial-gradient(circle, $color-3 15%, #333 100%);
-
                 z-index: 200;
-                font-size: 1.5rem;
+                font-size: clamp(1.2rem, 2vw, 1.5rem);
             }
 
             .bulleTxt5 {
                 position: absolute;
                 left: 10%;
                 top: 40%;
-                width: 200px;
-                height: 150px;
+                width: clamp(130px, 10vw, 200px);
+                height: clamp(130px, 10vw, 150px);
                 border-radius: 40%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 text-align: center;
-                padding: 1rem;
+                padding: clamp(0.5rem, 2vw, 1rem);
                 color: white;
                 // background: linear-gradient(-145deg, rgba(61, 58, 58, 0.357) 30%, $color-3 100%);
                 background: radial-gradient(closest-side, $color-2 10%, $color-3 100%);
                 z-index: 200;
-                font-size: 1.5rem;
+                font-size: clamp(1.2rem, 2vw, 1.5rem);
             }
 
             .bulleTxt6 {
                 position: absolute;
                 left: 25%;
                 top: 60%;
-                width: 200px;
-                height: 150px;
+                width: clamp(130px, 10vw, 200px);
+                height: clamp(130px, 10vw, 150px);
                 border-radius: 50%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 text-align: center;
-                padding: 1rem;
+                padding: clamp(0.5rem, 2vw, 1rem);
                 color: white;
                 background: linear-gradient(345deg, $color-6 10%, $color-4 50%);
                 z-index: 200;
-                font-size: 1.5rem;
+                font-size: clamp(1.2rem, 2vw, 1.5rem);
             }
 
         }
@@ -489,7 +494,6 @@
     padding-bottom: 100px;
     transform: translateY(-3px);
     height: 30vh;
-    // background: transparent;
     text-transform: uppercase;
 }
 
@@ -1106,6 +1110,38 @@
     }
 }
 
+@media (max-width: 1440px) {
+.homeContainer{
+    .movie{
+        left: 80%;
+    }
+}
+}
+@media (max-width: 1024px) {
+    .homeContainer{
+        .movie{
+            left: 67%;
+            top: 50%;
+            width: 300px;
+            height: 150px;
+        }
+    }
+}
+@media (max-height: 620px) {
+    .homeContainer{
+        .movie{
+            left: 67%;
+            top: 50%;
+            width: 300px;
+            height: 150px;
+        }
+        .vignetteContain {
+            .posAbH1{
+                margin-top: 60px;
+            }
+        }
+    }
+}
 @media (max-width: 425px) {
     .homeContainer {
         .arrow {
@@ -1122,6 +1158,7 @@
 
         .vignetteContain {
             .posAbH1{
+                margin-top: 260px;
                 font-size: 4rem;
                 height: 10vh;
             }

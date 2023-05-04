@@ -154,7 +154,7 @@ export default function Entreprise() {
                     <li className='liAnim'><span className='txtAnim'><strong className='sizeUp'>Relance impayés</strong></span></li>
                     <li className='liAnim'><span className='txtAnim'>Tableau de suivi des <strong className='color sizeDown'>dépenses</strong></span></li>
                     <li className='liAnim'><span className='txtAnim'>Commandes <strong className='color sizeUp'>fournisseurs</strong></span></li>
-                    <li className='liAnim'><span className='txtAnim'>Classeurs de chantiers, documents,<br/> affichages obligatoires</span></li>
+                    <li className='liAnim'><span className='txtAnim'>Classeurs de chantiers, documents,<br /> affichages obligatoires</span></li>
                     <li className='liAnim'><span className='txtAnim'><strong className='color'>Gestion</strong><strong className='sizeUp'> flotte </strong><strong className='color'>automobile</strong></span></li>
                     <li className='liAnim'><span className='txtAnim'><strong className='color sizeUp'>Démarches</strong><strong className='sizeDown'> Administratives</strong></span></li>
                     <li className='liAnim'><span className='txtAnim'>Organisation de <strong className='color'>réunions</strong></span></li>
@@ -176,8 +176,8 @@ export default function Entreprise() {
                     <li className='li2Anim'><span className='txt2Anim'>Etablissement de <strong className='color'>plannings</strong></span></li>
                     <li className='li2Anim'><span className='txt2Anim'>Carte <strong className='color'>C.I.B.T.P</strong></span></li>
                     <li className='li2Anim'><span className='txt2Anim'>Notes de <strong className='color'>frais</strong></span></li>
-                    <li className='li2Anim'><span className='txt2Anim'><strong className='color'>Aide</strong> au recrutement <br/> (tri CV, réponses candidats, fiches de poste)</span></li>
-                    <li className='li2Anim'><span className='txt2Anim'><strong className='color'>Organisation des déplacements</strong><br/> (billets, hôtels, séjours entiers)</span></li>
+                    <li className='li2Anim'><span className='txt2Anim'><strong className='color'>Aide</strong> au recrutement <br /> (tri CV, réponses candidats, fiches de poste)</span></li>
+                    <li className='li2Anim'><span className='txt2Anim'><strong className='color'>Organisation des déplacements</strong><br /> (billets, hôtels, séjours entiers)</span></li>
                 </ul>
             </div>
             <div className="gestion">
@@ -187,7 +187,7 @@ export default function Entreprise() {
             <div className="gestionAdList">
                 <h1 className='titleAnim2'>Administrative</h1>
                 <ul className='adAnim'>
-                    <li className='li3Anim'><span className='txt3Anim'><strong className='color'>Création de comptes</strong> en ligne <br/>(E.D.F, impots, fournisseurs)</span></li>
+                    <li className='li3Anim'><span className='txt3Anim'><strong className='color'>Création de comptes</strong> en ligne <br />(E.D.F, impots, fournisseurs)</span></li>
                     <li className='li3Anim'><span className='txt3Anim'>Traitement <strong className='color'>mails</strong></span></li>
                     <li className='li3Anim'><span className='txt3Anim'><strong className='color'>Courriers / Documents</strong> : saisie, envoi</span></li>
                     <li className='li3Anim'><span className='txt3Anim'>Envois <strong className='color'>recommandés</strong></span></li>
@@ -213,10 +213,18 @@ export default function Entreprise() {
                 <span className='spanGestion grow'>Organisation</span>
             </div>
             <div className='find'>
-                <ul className='toBottom'>
-                    <li>Bien classé</li>
-                    <li>Bien trouvé</li>
-                </ul>
+                <div className="ulList">
+                    <ul className='toBottom'>
+                        <li>Bien classé</li>
+                        <li>Bien trouvé</li>
+                    </ul>
+                    <ul className='ulTxt'>
+                        <li><span>Tri</span> pour ne garder que les documents nécessaires</li>
+                        <li><span>Création</span> d'étiquettes de classeurs et de documents</li>
+                        <li><span>Classement</span> informatique</li>
+                        <li><span>Création</span> d'archivage</li>
+                    </ul>
+                </div>
                 <div className="titleAnim">
                     <h2 className='h2Anim'>Sur votre</h2> <h2 className='h2Anim'> <strong className='color'>bureau</strong></h2> <h2 className='h2Anim'>ou sur votre</h2> <h2 className='h2Anim'><strong className='color'>ordi</strong></h2>
                 </div>

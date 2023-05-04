@@ -16,7 +16,7 @@
         background-color: $color-1;
 
         .title {
-            font-size: 21.3rem;
+            font-size: clamp(4.3rem, 18vw, 20rem);
             text-shadow:
                 -1px 1px 0 $color-3,
                 -2px 2px 0 $color-3,
@@ -42,13 +42,16 @@
             font-size: 5rem;
 
             .liAnim {
+                font-size: clamp(1rem, 6vw, 4.5rem);
                 color: white;
                 overflow: hidden;
                 white-space: nowrap;
                 height: 'max-content';
-
-                // border: 1px solid black;
+                strong{
+                    font-size: clamp(1rem, 6vw, 4.5rem);
+                }
                 span {
+                    font-size: clamp(1rem, 6vw, 4.5rem);
                     display: block;
                     overflow: hidden;
                     transform: translateY(200px);
@@ -64,8 +67,7 @@
 
         .titleAnim {
             background-color: $color-4;
-            // -webkit-text-stroke: 2px $color-2;
-            // text-shadow: -4px 5px 0 $color-1;
+            font-size: clamp(4.3rem, 18vw, 20rem);
             text-shadow:
                 -1px 1px 0 $color-2,
                 -2px 2px 0 $color-2,
@@ -77,12 +79,11 @@
                 -7px 7px 0 $color-2,
                 -8px 8px 0 $color-2;
             color: white;
-            height: 460px;
+            height: max-content;
             margin: 30px;
             transform: translateX(-1000px);
             border: 2px solid $color-1;
             border-radius: 20px;
-            font-size: 24rem;
             text-transform: uppercase;
             text-align: center;
         }
@@ -93,13 +94,14 @@
             font-size: 4.5rem;
 
             .li2Anim {
-                // opacity: 0;
+                font-size: clamp(1rem, 6vw, 4.5rem);
                 overflow: hidden;
                 white-space: nowrap;
                 height: 'max-content';
 
                 // border: 1px solid black;
                 span {
+                    font-size: clamp(1rem, 6vw, 4.5rem);
                     display: block;
                     overflow: hidden;
                     transform: translateY(200px);
@@ -122,20 +124,18 @@
         background-color: $color-5;
 
         .titleAnim2 {
-            font-size: 18rem;
+            font-size: clamp(4.3rem, 18vw, 20rem);
             transform: rotateX(180deg);
-            // -webkit-text-stroke: 2px $color-1;
-            // text-shadow: -4px 5px 0 $color-1;
             text-shadow:
-            -1px 1px 0 $color-1,
-            -2px 2px 0 $color-1,
-            -3px 3px 0 $color-1,
-            -3px 3px 0 $color-1,
-            -4px 4px 0 $color-1,
-            -5px 5px 0 $color-1,
-            -6px 6px 0 $color-1,
-            -7px 7px 0 $color-1,
-            -8px 8px 0 $color-1;
+                -1px 1px 0 $color-1,
+                -2px 2px 0 $color-1,
+                -3px 3px 0 $color-1,
+                -3px 3px 0 $color-1,
+                -4px 4px 0 $color-1,
+                -5px 5px 0 $color-1,
+                -6px 6px 0 $color-1,
+                -7px 7px 0 $color-1,
+                -8px 8px 0 $color-1;
             color: $color-3;
             text-decoration: double;
             text-transform: uppercase;
@@ -147,18 +147,18 @@
             font-size: 4.5rem;
 
             .li3Anim {
-                // opacity: 0;
                 overflow: hidden;
                 white-space: nowrap;
                 height: 'max-content';
-
-                // border: 1px solid black;
                 span {
+                    font-size: clamp(1rem, 5vw, 4.5rem);
                     display: block;
                     overflow: hidden;
                     transform: translateY(200px);
                     text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
-                    strong{
+
+                    strong {
+                        font-size: clamp(1rem, 6vw, 4.5rem);
                         text-shadow:
                             -1px -1px 0 $color-1,
                             1px -1px 0 $color-1,
@@ -200,26 +200,40 @@
     .find {
         background-color: $color-2;
 
-        .toBottom {
-            font-size: 3em;
-            width: max-content;
-            margin: 0 0 0 100px;
-            list-style-type: none;
-            overflow: hidden;
+        .ulList {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
 
-            li {
-                margin: 15px;
-                color: white;
-                padding: 1rem;
-                box-shadow: 4px 4px 0 black;
-                border: 2px solid $color-1;
-                border-radius: 20px;
-                text-shadow: 3px 2px 0px black;
-                transform: translateY(50px);
-                opacity: 0;
-                text-transform: uppercase;
-                background: rgb(64, 78, 92);
-                background: linear-gradient(145deg, rgba(64, 78, 92, 1) 30%, rgba(166, 207, 213, 1) 100%);
+            .toBottom {
+                font-size: 3em;
+                width: max-content;
+                margin: 0 0 0 100px;
+                list-style-type: none;
+                overflow: hidden;
+
+                li {
+                    margin: 15px;
+                    color: white;
+                    padding: 1rem;
+                    box-shadow: 4px 4px 0 black;
+                    border: 2px solid $color-1;
+                    border-radius: 20px;
+                    text-shadow: 3px 2px 0px black;
+                    transform: translateY(50px);
+                    opacity: 0;
+                    text-transform: uppercase;
+                    background: rgb(64, 78, 92);
+                    background: linear-gradient(145deg, rgba(64, 78, 92, 1) 30%, rgba(166, 207, 213, 1) 100%);
+                }
+            }
+            .ulTxt{
+                font-size: clamp(1.5rem, 2vw, 3rem);
+                // color: $color-4;
+                list-style-type: disc;
+                span{
+                    color: $color-3;
+                }
             }
         }
 
@@ -298,19 +312,20 @@
                 }
             }
         }
-        
+
         .gestionAdList {
             .titleAnim2 {
                 font-size: 9rem;
             }
+
             ul {
                 .li3Anim {
                     height: 100px;
                     font-size: 2.2rem;
-            
+
                     .txt3Anim {
                         overflow-wrap: break-word;
-            
+
                         strong {
                             font-size: 2.5rem;
                         }
@@ -318,32 +333,37 @@
                 }
             }
         }
-        .find{
-            .toBottom{
-                margin: 0;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                width: max-content;
+
+        .find {
+            .ulList{
+                .toBottom {
+                    margin: 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    width: max-content;
+                }
             }
         }
     }
 }
+
 @media (max-width: 425px) {
     .entreprise {
         .gestionEtsList {
             .title {
                 font-size: 4.3rem;
             }
-            
+
             ul {
                 .liAnim {
                     height: 4rem;
                     font-size: clamp(1rem, 1.5vw, 1.5rem);
                     border-bottom: 1px dotted white;
+
                     .txtAnim {
                         word-wrap: break-word;
-                        
+
                         strong {
                             font-size: 1.2rem;
                         }
@@ -351,18 +371,19 @@
                 }
             }
         }
-        
+
         .gestionPersList {
             .titleAnim {
                 font-size: 4rem;
                 height: max-content;
             }
-            
+
             ul {
                 .li2Anim {
                     height: 4rem;
                     font-size: clamp(1rem, 1.5vw, 1.5rem);
                     border-bottom: 1px solid $color-1;
+
                     .txt2Anim {
                         strong {
                             font-size: 1.5rem;
@@ -371,16 +392,18 @@
                 }
             }
         }
-        
+
         .gestionAdList {
             .titleAnim2 {
                 font-size: 3.8rem;
             }
+
             ul {
                 .li3Anim {
                     height: 4rem;
                     font-size: clamp(1rem, 1.5vw, 1.5rem);
                     border-bottom: 1px solid $color-1;
+
                     .txt3Anim {
                         strong {
                             overflow-wrap: break-word;
@@ -390,9 +413,13 @@
                 }
             }
         }
-        .find{
-            .titleAnim{
-                .h2Anim{
+
+        .find {
+            .ulList{
+                flex-direction: column;
+            }
+            .titleAnim {
+                .h2Anim {
                     font-size: 3rem;
                 }
             }
