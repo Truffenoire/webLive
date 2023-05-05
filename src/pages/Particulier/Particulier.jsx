@@ -53,13 +53,14 @@ export default function Particulier() {
 }, [])
 
 useEffect(() => {
-  gsap.to('.title', {
-      x: 0,
+  gsap.to('.titleServ', {
+      x: 800,
+      opacity: 1,
       duration: 0.5,
       scrollTrigger: {
-          trigger: ".title",
+          trigger: ".titleServ",
           // markers: true,
-          start: "top 100%",
+          start: "top 80%",
           end: "bottom 100%",
           scrub: true
       }
@@ -73,7 +74,7 @@ useEffect(() => {
         <span className='spanGestion t2'>Exit - Charge mentale - Exit - Charge mentale - Exit - Charge mentale&nbsp;</span>
       </div>
       <div className="service">
-        <h1 className="title">Services aux <strong className='titleUp'> particuliers</strong></h1>
+        <h1 className="titleServ">Services aux <strong className='titleUp'> particuliers</strong></h1>
         <ul className="serviceList">
           <li className='liAnim'><span className='txtAnim'> <strong className='color'>Lettres</strong> personnelles, professionnelles</span></li>
           <li className='liAnim'><span className='txtAnim'> Cv <strong className='italic'>lettres de motivation</strong>, demission, disponibilité</span></li>

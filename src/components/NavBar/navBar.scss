@@ -7,7 +7,7 @@
     top: 30px;
     letter-spacing: -5px;
     z-index: 1000!important;
-    font-size: 50px;
+    font-size: clamp(2rem, 10vw, 3rem);
     color: $color-6;
     outline: none;
     background-color: transparent;
@@ -356,5 +356,10 @@
                 }
             }
         }
+    }
+}
+@media (max-width: 320px){
+    .btnMenu{
+        letter-spacing: -3px;
     }
 }

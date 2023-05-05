@@ -42,8 +42,9 @@
         background-color: $color-3;
         overflow: hidden;
 
-        .title {
+        .titleServ {
             font-size: clamp(1rem, 15vw, 12rem);
+            opacity: 0;
             color: white;
             text-shadow:
                 -8px -0px 0 $color-1,

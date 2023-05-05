@@ -1,16 +1,137 @@
-.cardTarif{
-    .boxSvg{
+.cardTarif {
+    .txtBtnSafari{
+        cursor: pointer;
+        text-transform: uppercase;
+        font-family: impact;
+        color: $color-3;
+        border: 1px solid $color-3;
+        border-radius: 40%;
+        width: 250px;
+        height: 70px;
+        line-height: 70px;
+        text-align: center;
+        margin: auto;
+        font-size: clamp(1.5rem, 2vw, 3rem);
+        text-shadow: 
+        -1px -1px 0px $color-4,
+        1px -1px 0px $color-4,
+        -1px 1px 0px $color-4,
+        1px 1px 0px $color-4;
+        &:hover{
+            animation: btnAnimation 0.5s ease-in-out both;
+
+        }
+    }
+    .boxSvgSafari{
+        height: 70vh;
+        display: flex;
+        gap: 1rem;
+        justify-content: space-around;
+        margin-bottom: 2rem;
+            .safariContain {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 1rem;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            // background-color: $color-3;
+            border-radius: 10px;
+            .bLeft {
+                border-left: 1px solid white;
+            }
+    
+            .forfaitContain {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                height: 100%;
+                width: 50%;
+                flex-grow: 1;
+    
+                .forfait {
+                    color: $color-2;
+                    font-size: clamp(2rem, 4vw, 3rem);
+                    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                    text-shadow:
+                        -1px 1px 0 white,
+                        -1px 1px 0 white,
+                        -1px 1px 0 white,
+                        -1px 1px 0 white;
+                }
+    
+                .heure {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 50%;
+                    border: 1px solid $color-5;
+                    background-color: #b79492;
+                    margin: 2rem 0;
+                    padding: 1.5rem;
+                    font-size: clamp(1.5rem, 3vw, 1.5rem);
+                    text-shadow:
+                        -0.5px 0.5px 0 white,
+                        -0.5px 0.5px 0 white,
+                        -0.5px 0.5px 0 white,
+                        -0.5px 0.5px 0 white;
+                }
+    
+                .prix {
+                    font-family: ThunderExtraLightHc;
+                    font-size: clamp(2rem, 6vw, 3rem);
+                    flex-grow: 4;
+                    padding-top: 50px;
+                    text-shadow:
+                        -1px 1px 0 white,
+                        -1px 1px 0 white,
+                        -1px 1px 0 white,
+                        -1px 1px 0 white;
+                }
+    
+                div.mPrice {
+                    text-align: center;
+                    font-size: clamp(1.5rem, 3vw, 3rem);
+                    padding-top: 50px;
+    
+                    span {
+                        color: $color-4;
+                    }
+    
+                    b {
+                        border: 1px solid black;
+                        border-radius: 50%;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 30px;
+                        width: max-content;
+                    }
+                }
+            }
+        }
+    }
+    .boxSvg {
         height: 100vh;
         display: flex;
-        svg{
-            .contain{
+        justify-content: center;
+
+
+        svg {
+            .contain {
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
-                .bLeft{
+
+                .bLeft {
                     border-left: 1px solid white;
                 }
-                .forfaitContain{
+
+                .forfaitContain {
                     display: flex;
                     flex-direction: column;
                     justify-content: flex-start;
@@ -18,17 +139,19 @@
                     height: 100%;
                     width: 50%;
                     flex-grow: 1;
-                    .forfait{
+
+                    .forfait {
                         color: $color-2;
-                        font-size: 2rem;
+                        font-size: clamp(2rem, 4vw, 3rem);
                         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-                        text-shadow: 
-                        -1px 1px 0 white,
-                        -1px 1px 0 white,
-                        -1px 1px 0 white,
-                        -1px 1px 0 white;
+                        text-shadow:
+                            -1px 1px 0 white,
+                            -1px 1px 0 white,
+                            -1px 1px 0 white,
+                            -1px 1px 0 white;
                     }
-                    .heure{
+
+                    .heure {
                         display: flex;
                         justify-content: center;
                         align-items: center;
@@ -40,29 +163,35 @@
                         margin: 2rem 0;
                         padding: 1.5rem;
                         font-size: clamp(1.5rem, 3vw, 1.5rem);
-                        text-shadow: 
-                        -0.5px 0.5px 0 white,
-                        -0.5px 0.5px 0 white,
-                        -0.5px 0.5px 0 white,
-                        -0.5px 0.5px 0 white;
+                        text-shadow:
+                            -0.5px 0.5px 0 white,
+                            -0.5px 0.5px 0 white,
+                            -0.5px 0.5px 0 white,
+                            -0.5px 0.5px 0 white;
                     }
-                    .prix{
+
+                    .prix {
                         font-family: ThunderExtraLightHc;
-                        font-size: 3rem;
+                        font-size: clamp(2rem, 6vw, 3rem);
                         flex-grow: 4;
-                        text-shadow: 
-                        -1px 1px 0 white,
-                        -1px 1px 0 white,
-                        -1px 1px 0 white,
-                        -1px 1px 0 white;
+                        padding-top: 50px;
+                        text-shadow:
+                            -1px 1px 0 white,
+                            -1px 1px 0 white,
+                            -1px 1px 0 white,
+                            -1px 1px 0 white;
                     }
-                    div.mPrice{
+
+                    div.mPrice {
                         text-align: center;
-                        font-size: clamp(2.5rem, 1rem, 2.5rem );
-                        span{
+                        font-size: clamp(1.5rem, 1vw, 3rem);
+                        padding-top: 50px;
+
+                        span {
                             color: $color-4;
                         }
-                        b{
+
+                        b {
                             border: 1px solid black;
                             border-radius: 50%;
                             display: inline-flex;
@@ -76,15 +205,18 @@
             }
         }
     }
-    .svgBtn{
+
+    .svgBtn {
         display: flex;
         justify-content: center;
         margin-bottom: 1rem;
-        svg{
+
+        svg {
             cursor: pointer;
             outline: none;
             height: 100px;
-            .txtBtn{
+
+            .txtBtn {
                 position: relative;
                 font-family: ThunderThinHc;
                 font-size: clamp(1rem, 1.3vw, 1.3rem);
@@ -93,13 +225,14 @@
                 line-height: 50px;
                 transform: scale(0);
                 z-index: 10;
-                text-shadow: 
-                        -1px 1px 0 $color-5,
-                        -1px 1px 0 $color-5,
-                        -1px 1px 0 $color-5,
-                        -1px 1px 0 $color-5;
-                &:hover{
-                    text-shadow: 
+                text-shadow:
+                    -1px 1px 0 $color-5,
+                    -1px 1px 0 $color-5,
+                    -1px 1px 0 $color-5,
+                    -1px 1px 0 $color-5;
+
+                &:hover {
+                    text-shadow:
                         -1px 1px 0 $color-3,
                         -1px 1px 0 $color-3,
                         -1px 1px 0 $color-3,
@@ -109,11 +242,40 @@
         }
     }
 }
+
+@keyframes btnAnimation {
+    0% {
+        color: $color-3;
+    }
+    100% {
+        color: $color-4;
+        text-shadow: 
+        1px -1px 0px $color-3,
+        2px -2px 0px $color-3,
+        3px -3px 0px $color-3,
+        4px -4px 0px $color-3;
+    }
+  }
+
 @media (max-width: 768px) {
-    .cardTarif{
-        .boxSvg{
+    .cardTarif {
+        .boxSvg {
             height: max-content;
             flex-direction: column;
+        }
+        .boxSvgSafari {
+            height: max-content;
+            flex-direction: column;
+        }
+    }
+}
+@media (max-width: 625px) {
+    .cardTarif {
+        .boxSvgSafari {
+            .safariContain{
+                margin: 0;
+                height: max-content;
+            }
         }
     }
 }
