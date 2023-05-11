@@ -1,4 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
+import { HashLink as Link } from 'react-router-hash-link';
+
 import { useForm } from 'react-hook-form'
 import emailjs from '@emailjs/browser';
 import { gsap } from "gsap"
@@ -206,7 +208,13 @@ export default function Contact() {
                 <h1>Une <span>question</span>, un <span>projet</span> ou <span>besoin</span> d'une <span>secretaire indépendante</span> au plus vite ?</h1>
                 <div className='whatsContact'>
                     <div className="containTxt">
-                        <div className="call">Passez votre <span>commande</span></div>
+                        <div className="call">Passez votre 
+                        <span
+                        onClick={() => document.querySelector('#ancreForm').scrollIntoView({ behavior: 'smooth' })}
+                        >
+                            commande
+                            </span>
+                        </div>
                         <div className='mail'>secretariatlive13@gmail.com</div>
                         <div className='numberTel'>07.60.17.85.07</div>
 
@@ -230,7 +238,7 @@ export default function Contact() {
             {/* chat WHATSAPP mais pas le bot */}
             {/* <a aria-label="Chat on WhatsApp" href="https://wa.me/+33760178507"> <img alt="Chat on WhatsApp" src={WhatsAppImg} /> </a> */}
             {/* WHATSAPP */}
-            <div className="containForm">
+            <div id='ancreForm' className="containForm">
                 <form className="formulaire" ref={form} onSubmit={handleSubmit(sendEmail)}>
                     {isSended && (<small className='smallSubmit'>Merci pour votre message, nous vous repondrons très vite.</small>)}
                     <label htmlFor="name">Nom <span className='etoile'>*</span></label>

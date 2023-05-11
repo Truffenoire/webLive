@@ -3,7 +3,6 @@
         cursor: pointer;
         text-transform: uppercase;
         font-family: impact;
-        color: $color-3;
         border: 1px solid $color-3;
         border-radius: 40%;
         width: 250px;
@@ -17,9 +16,13 @@
         1px -1px 0px $color-4,
         -1px 1px 0px $color-4,
         1px 1px 0px $color-4;
-        &:hover{
-            animation: btnAnimation 0.5s ease-in-out both;
-
+        a{
+            color: $color-3;
+            text-decoration: none;
+            &:hover{
+                animation: btnAnimation 0.5s ease-in-out both;
+                
+            }
         }
     }
     .boxSvgSafari{
@@ -237,6 +240,9 @@
                         -1px 1px 0 $color-3,
                         -1px 1px 0 $color-3,
                         -1px 1px 0 $color-3;
+                }
+                a{
+                    text-decoration: none;
                 }
             }
         }

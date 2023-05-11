@@ -3,6 +3,9 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 
+import { HashLink as Link } from 'react-router-hash-link';
+
+
 export default function Card() {
 
     const [navSafari, setNavSafari] = useState(false)
@@ -191,8 +194,8 @@ export default function Card() {
                         </div>
 
                     </div>
-                    <div role='button' className='txtBtnSafari'>
-                        Devis Gratuit
+                    <div role='button' className='txtBtnSafari'> 
+                        <Link to={'/contact#ancreForm'}>Devis Gratuit</Link>
                     </div>
                 </>
                 :
@@ -271,8 +274,8 @@ export default function Card() {
                         >
                             <rect ref={btnRef} x="0" y="0" width="100px" height="50px" rx="25" fill="#fff" />
                             <foreignObject x='0' y='0' width='100' height="50">
-                                <div className='txtBtn'>
-                                    Devis Gratuit
+                                <div role='button' className='txtBtn'>
+                                <Link to={'/contact#ancreForm'}>Devis Gratuit</Link>
                                 </div>
                             </foreignObject>
                         </svg>
