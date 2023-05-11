@@ -100,34 +100,62 @@ export default function Cards() {
   // },[])
   useEffect(() => {
     const d = screenWidth / -4;
-    console.log(screenWidth);
-    console.log(d);
-    gsap.to('.bulleTxt1', {
-      xPercent: d,
-      duration: 5,
-      delay: 1,
-      scrollTrigger: {
-        trigger: ".animateCercle",
-        // markers: true,
-        start: "top center",
-        end: "top",
-        scrub: true
-      }
-    })
+    if (window.innerWidth < 768) {
+      console.log('animation');
+      gsap.to('.bulleTxt1', {
+        xPercent: -50,
+        duration: 5,
+        delay: 1,
+        scrollTrigger: {
+          trigger: ".animateCercle",
+          // markers: true,
+          start: "top center",
+          end: "top",
+          scrub: true
+        }
+      })
+    } else {
+      gsap.to('.bulleTxt1', {
+        xPercent: d,
+        duration: 5,
+        delay: 1,
+        scrollTrigger: {
+          trigger: ".animateCercle",
+          // markers: true,
+          start: "top center",
+          end: "top",
+          scrub: true
+        }
+      })
+    }
   }, [])
   useEffect(() => {
     const d = screenWidth / -16;
-    gsap.to('.bulleTxt2', {
-      xPercent: d,
-      duration: 5,
-      scrollTrigger: {
-        trigger: ".animateCercle",
-        // markers: true,
-        start: "top center",
-        end: "top",
-        scrub: true
-      }
-    })
+    if (window.innerWidth < 768) {
+      gsap.to('.bulleTxt2', {
+        xPercent: -15,
+        duration: 5,
+        scrollTrigger: {
+          trigger: ".animateCercle",
+          // markers: true,
+          start: "top center",
+          end: "top",
+          scrub: true
+        }
+      })
+    } else {
+      gsap.to('.bulleTxt2', {
+        xPercent: d,
+        duration: 5,
+        scrollTrigger: {
+          trigger: ".animateCercle",
+          // markers: true,
+          start: "top center",
+          end: "top",
+          scrub: true
+        }
+      })
+    }
   }, [])
   useEffect(() => {
     const d = screenWidth / -18;
@@ -146,9 +174,9 @@ export default function Cards() {
   }, [])
   useEffect(() => {
     // const d = screenWidth / 25 +'px';
-    if(window.innerWidth < 768){
+    if (window.innerWidth < 768) {
       console.log('animation');
-    }else{
+    } else {
       gsap.to('.bulleTxt4', {
         xPercent: 25,
         duration: 5,
@@ -164,9 +192,9 @@ export default function Cards() {
   }, [])
   useEffect(() => {
     // const d = screenWidth / 100 +'px';
-    if(window.innerWidth < 768){
+    if (window.innerWidth < 768) {
       console.log('animation');
-    }else{
+    } else {
       gsap.to('.bulleTxt5', {
         xPercent: 50,
         duration: 5,
@@ -181,18 +209,27 @@ export default function Cards() {
     }
   }, [])
   useEffect(() => {
-    // const d = screenWidth / 40 +'px';
-    gsap.to('.bulleTxt6', {
-      xPercent: 30,
-      duration: 5,
-      scrollTrigger: {
-        trigger: ".animateCercle",
-        // markers: true,
-        start: "top center",
-        end: "top",
-        scrub: true
-      }
-    })
+    if (window.innerWidth < 768) {
+      console.log('animation');
+    } else {
+      gsap.to('.bulleTxt6', {
+        xPercent: 30,
+        duration: 5,
+        scrollTrigger: {
+          trigger: ".animateCercle",
+          // markers: true,
+          start: "top center",
+          end: "top",
+          scrub: true
+        }
+      })
+    }
+  }, [])
+
+  const [widthStyle, setWidthStyle] = useState(null)
+
+  useEffect(() => {
+    setWidthStyle(window.innerWidth)
   }, [])
 
   return (
@@ -205,13 +242,29 @@ export default function Cards() {
       <h1>Prendre une assitante <br /> indépendante c'est <span className='dotGrow'>...</span></h1>
       <div className="containCards">
         <div onMouseEnter={handleStyleDo} onMouseLeave={() => setStyleCardDo(false)} className="card" id='cardDo'>
-          {styleCardDo ?
-            <h2 className='hovered'>Faire des <br /> économies</h2>
-            :
-            <div className='pig'>
-              <img src={pig} alt="" />
-              <span>...</span>
+          {widthStyle <= 768 ?
+            <div>
+              {styleCardDo ?
+                <div className='pig'>
+                  <img src={pig} alt="" />
+                  <span>...</span>
+                </div>
+                :
+                <h2 className='hovered'>Économiser</h2>
+              }
             </div>
+            :
+            <div>
+              {styleCardDo ?
+                <h2 className='hovered'>Faire des <br /> économies</h2>
+                :
+                <div className='pig'>
+                  <img src={pig} alt="" />
+                  <span>...</span>
+                </div>
+              }
+            </div>
+
           }
           <div id='mouseArrow'>
             <svg className={styleCardDo ? 'hovered' : undefined} width="140" height="140" viewBox="0 0 107 169" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -221,10 +274,15 @@ export default function Cards() {
           </div>
         </div>
         <div onMouseEnter={handleStyleWow} onMouseLeave={() => setStyleCardWow(false)} className="card" id='cardWow'>
-          <h2 className={styleCardWow ? 'hovered h2Wow' : 'h2Wow'}><span>WOW</span> mais</h2>
+          {widthStyle <= 768 ?
+            <h2 className={styleCardWow ? 'hovered h2Wow' : 'h2Wow'}><span>WOW</span></h2>
+            :
+            <h2 className={styleCardWow ? 'hovered h2Wow' : 'h2Wow'}><span>WOW</span> mais</h2>
+          }
           {styleCardWow ?
             <div className='hideSmile'>
-              <p>aussi</p>
+              {widthStyle <= 768 ? <p><span className='h2WowHide'>mais</span>aussi</p> : <p>aussi</p>}
+
               <svg xmlns="http://www.w3.org/2000/svg" width="135" height="121" viewBox="0 0 135 121" fill="none">
                 <path d="M132 60.5C132 91.9559 103.44 118 67.5 118C31.5603 118 3 91.9559 3 60.5C3 29.0441 31.5603 3 67.5 3C103.44 3 132 29.0441 132 60.5Z" stroke="#66CC99" strokeWidth="2" />
                 <path d="M50.5 41C50.5 41 48.8484 30.203 47 26.5C44.725 21.9424 40.886 41.3535 38.5 41H21.5C18.5 41 31.5 50.5 31.5 50.5C31.5 50.5 22.5 64 28 61C33.5 58 41.9111 50.6167 41 54C41 54 54.4663 67.5632 53 64C50.4646 57.8387 53 50.5 53 50.5C53 50.5 65.5 43.5 62.5 43.5C59.5 43.5 50.5 41 50.5 41Z" stroke="#66CC99" strokeWidth="2" />
@@ -234,8 +292,8 @@ export default function Cards() {
             </div>
             :
             <div className='hideSmile'>
-              <p>aussi</p>
-              <svg xmlns="http://www.w3.org/2000/svg" width="131" height="122" viewBox="0 0 131 122" fill="none">
+
+              <svg className='smileHide' xmlns="http://www.w3.org/2000/svg" width="131" height="122" viewBox="0 0 131 122" fill="none">
                 <path d="M128.5 61C128.5 93.1441 100.465 119.5 65.5 119.5C30.5355 119.5 2.5 93.1441 2.5 61C2.5 28.8559 30.5355 2.5 65.5 2.5C100.465 2.5 128.5 28.8559 128.5 61Z" stroke="white" strokeWidth="3" />
                 <path d="M82 41.5C91.8703 46.9491 96.6041 51.4595 104.5 60.5" stroke="white" strokeWidth="2" />
                 <path d="M101 38.5C95.3445 46.6417 90.9557 51.1009 82.5 59" stroke="white" strokeWidth="2" />
@@ -251,8 +309,8 @@ export default function Cards() {
       </div>
       <div className='circle'>
         <svg className='circleArrow' width="80" height="80" viewBox="0 0 337 846" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M168 846H188C198.272 736.426 226.723 695.434 336.5 675.5L332.5 636.5C267.955 643.76 236.144 659.82 188 712V0H168V846Z" fill="yellow" />
-          <path d="M168.5 846H148.5C138.228 736.426 109.777 695.434 0 675.5L4 636.5C68.5447 643.76 100.356 659.82 148.5 712V0H168.5V846Z" fill="yellow" />
+          <path d="M168 846H188C198.272 736.426 226.723 695.434 336.5 675.5L332.5 636.5C267.955 643.76 236.144 659.82 188 712V0H168V846Z" fill="#a6cfd5" />
+          <path d="M168.5 846H148.5C138.228 736.426 109.777 695.434 0 675.5L4 636.5C68.5447 643.76 100.356 659.82 148.5 712V0H168.5V846Z" fill="#a6cfd5" />
         </svg>
         <div className='animateCercle'>
           <div className="circle un"></div>

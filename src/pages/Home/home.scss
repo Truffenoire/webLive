@@ -1,11 +1,26 @@
 // CSS ARROW
 @keyframes bounceArrow {
-    0%{ transform: scale(1 , 1);}
-    20% {transform: scale(1, 1.1);}
-    50% {transform: scale(1, 0.9);}
-    70% {transform: scale(1, 1.1);}
-    100% {transform: scale(1, 1);}
-  }
+    0% {
+        transform: scale(1, 1);
+    }
+
+    20% {
+        transform: scale(1, 1.1);
+    }
+
+    50% {
+        transform: scale(1, 0.9);
+    }
+
+    70% {
+        transform: scale(1, 1.1);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
 .homeContainer {
     .arrow {
         position: relative;
@@ -22,31 +37,36 @@
             height: clamp(700px, 30vw, 900px);
             overflow: visible;
             // z-index: 10;
-            
+
             path:nth-child(1) {
                 &:hover {
                     animation: bounceArrow 1s ease-in-out;
                 }
             }
         }
-        .cash{
+
+        .cash {
             position: absolute;
             bottom: 0;
             opacity: 0.2;
             left: 0%;
-            img{
+
+            img {
                 width: 150px;
             }
         }
-        .camenbert{
+
+        .camenbert {
             position: absolute;
             bottom: 10%;
             opacity: 0.2;
             left: 80%;
-            img{
+
+            img {
                 width: 150px;
             }
         }
+
         .movePlane {
             position: absolute;
             right: 10%;
@@ -57,6 +77,7 @@
             position: absolute;
             left: 10%;
         }
+
         .moveStars {
             width: clamp(150px, 20vw, 250px);
             opacity: 0.5;
@@ -64,6 +85,7 @@
             right: 0%;
             bottom: 0%;
         }
+
         .moveSunStars {
             width: clamp(150px, 23vw, 300px);
             opacity: 0.5;
@@ -79,12 +101,14 @@
         height: 200vh;
         z-index: 1;
         background: $color-3 url('../../imgImport/grid.svg') border-box;
+
         .moveFlyStars {
             opacity: 0.5;
             position: absolute;
             right: 20%;
             top: 20%;
         }
+
         h1 {
             position: relative;
             z-index: 1;
@@ -100,14 +124,15 @@
             margin-left: 10%;
             padding-top: 30%;
             padding-bottom: 5%;
-            .dotGrow{
+
+            .dotGrow {
                 line-height: 0;
                 font-size: clamp(7rem, 30vw, 12rem);
                 text-shadow:
-                -1px -1px 0 $color-5,
-                -2px 2px 0 $color-5,
-                -3px 3px 0 $color-5,
-                -4px 4px 0 $color-5;
+                    -1px -1px 0 $color-5,
+                    -2px 2px 0 $color-5,
+                    -3px 3px 0 $color-5,
+                    -4px 4px 0 $color-5;
             }
         }
 
@@ -143,18 +168,22 @@
                 transform: translateY(150px);
                 z-index: 1;
                 position: relative;
-                .pig{
+
+                .pig {
                     pointer-events: none;
-                    span{
+
+                    span {
                         position: absolute;
                         top: 0%;
                         font-size: 9rem;
                         color: white;
                     }
-                    img{
+
+                    img {
                         width: 150px;
                     }
                 }
+
                 &::before {
                     content: '';
                     height: 1px;
@@ -164,6 +193,7 @@
                     top: 15px;
                     left: 0;
                 }
+
                 &::after {
                     content: '';
                     height: 10px;
@@ -182,6 +212,7 @@
                     &::before {
                         background-color: #66cc99;
                     }
+
                     &::after {
                         border: 1px solid #66cc99;
                     }
@@ -204,25 +235,47 @@
                 h2.h2Wow {
                     margin-top: -40px;
                 }
-                .hideSmile{
+
+                .hideSmile {
+                    position: relative;
                     display: flex;
-                    justify-content: space-around;
-                    svg{
+                    pointer-events: none;
+
+                    p {
+                        display: flex;
+                        flex-direction: column;
+                    }
+
+                    svg {
+                        position: absolute;
                         width: 100px;
+                    }
+
+                    .smileHide {
+                        position: absolute;
+                        width: 100px;
+                        transform: translateY(-200px);
+                    }
+
+                    .h2WowHide {
+                        padding-left: 4rem;
+                        font-size: clamp(3rem, 7vw, 6rem);
+                        color: white;
                     }
                 }
             }
 
             h2.hovered {
-                font-size: clamp(4.3rem, 10vw, 7rem);
-                color: #66cc99;
-                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                pointer-events: none;
+                font-size: clamp(4.3rem, 10vw, 6rem);
+                color: white;
+                font-family: BarlowThin, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
                 letter-spacing: -5px;
                 text-shadow:
-                    -1px 1px 0 white,
-                    -1px 1px 0 white,
-                    -1px 1px 0 white,
-                    -1px 1px 0 white;
+                    -1px 1px 0 #66cc99,
+                    -1px 1px 0 #66cc99,
+                    -1px 1px 0 #66cc99,
+                    -1px 1px 0 #66cc99;
             }
 
             svg.hovered {
@@ -486,11 +539,11 @@
     text-align: center;
     background-color: $color-1;
     color: $color-3;
-    text-shadow: 
-    -1px 1px 0 $color-4,
-    1px 1px 0 $color-4,
-    2px 1px 0 $color-4,
-    3px 1px 0 $color-4;
+    text-shadow:
+        -1px 1px 0 $color-4,
+        1px 1px 0 $color-4,
+        2px 1px 0 $color-4,
+        3px 1px 0 $color-4;
     padding-bottom: 100px;
     transform: translateY(-3px);
     height: 30vh;
@@ -732,7 +785,7 @@
     h1 {
         margin: 5rem 0;
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        font-size: clamp(8rem, 18vw, 15rem);
+        font-size: clamp(7rem, 18vw, 15rem);
         text-transform: uppercase;
         letter-spacing: -1rem;
         color: $color-1;
@@ -988,17 +1041,20 @@
             #cardDo {
                 width: 80%;
             }
+
             #cardWow {
                 width: 80%;
             }
         }
-        }
     }
+}
+
 @media (max-width: 768px) {
     .homeContainer {
         .movie {
             display: none;
-            video{
+
+            video {
                 display: none;
             }
         }
@@ -1008,7 +1064,8 @@
                 transform: translateY(-450px);
                 height: 700px;
             }
-            .moveSunStars{
+
+            .moveSunStars {
                 display: none;
             }
         }
@@ -1025,6 +1082,13 @@
 
                 #cardWow {
                     width: 80%;
+
+                    .hideSmile {
+                        p {
+                            padding-left: 3rem;
+                        }
+
+                    }
                 }
             }
 
@@ -1111,15 +1175,16 @@
 }
 
 @media (max-width: 1440px) {
-.homeContainer{
-    .movie{
-        left: 80%;
+    .homeContainer {
+        .movie {
+            left: 80%;
+        }
     }
 }
-}
+
 @media (max-width: 1024px) {
-    .homeContainer{
-        .movie{
+    .homeContainer {
+        .movie {
             left: 67%;
             top: 50%;
             width: 300px;
@@ -1127,21 +1192,44 @@
         }
     }
 }
+
 @media (max-height: 620px) {
-    .homeContainer{
-        .movie{
+    .homeContainer {
+        .movie {
             left: 67%;
             top: 50%;
             width: 300px;
             height: 150px;
         }
+
         .vignetteContain {
-            .posAbH1{
+            .posAbH1 {
                 margin-top: 60px;
             }
         }
     }
 }
+
+@media (max-width: 768px) {
+    .homeContainer {
+        .vignette {
+            ul {
+                .item {
+                    height: 80px;
+
+                    .text {
+                        p {
+                            display: none;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+
 @media (max-width: 425px) {
     .homeContainer {
         .arrow {
@@ -1157,11 +1245,12 @@
         }
 
         .vignetteContain {
-            .posAbH1{
+            .posAbH1 {
                 margin-top: 260px;
                 font-size: 4rem;
                 height: 10vh;
             }
+
             // svg.wave {
             //     display: none;
             // }
@@ -1194,6 +1283,7 @@
 
             .circle {
                 overflow: hidden;
+
                 .animateCercle {
 
                     // .quatre{
