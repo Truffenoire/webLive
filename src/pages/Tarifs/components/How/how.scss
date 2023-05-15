@@ -56,7 +56,7 @@
                 }
             }
             .title{
-                font-size: clamp(1.5rem, 2.8rem, 3rem);
+                font-size: clamp(1.8rem, 2vw, 3rem);
                 color: $color-3;
                 flex-grow: 1;
                 text-shadow: 
@@ -68,6 +68,7 @@
             .btn{
                 font-size: clamp(1.5rem, 3rem, 3rem);
                 z-index: 1;
+                padding-right: 8px;
                 position: relative;
                 cursor: pointer;
             }

@@ -54,9 +54,9 @@ export default function Particulier() {
 
 useEffect(() => {
   gsap.to('.titleServ', {
-      x: 800,
+      x: 0,
       opacity: 1,
-      duration: 0.5,
+      // duration: 1,
       scrollTrigger: {
           trigger: ".titleServ",
           // markers: true,
