@@ -92,9 +92,9 @@ export default function NavBar({ isCharged, setIsCharged }) {
               <div className='menuFooter'>
                 <img src={Logo} alt="logo" />
                 <ul className='lienReseau'>
-                  <li><Link to={'https://www.instagram.com/secretariatlive/'} target='_blank' >+ Instagram</Link></li>
-                  <li><Link to={'https://www.facebook.com/Secretariatlive'} target='_blank'>+ FaceBook</Link></li>
-                  <li><Link to={'https://www.linkedin.com/in/anne-sophie-philippe-52930b211/'} target='_blank'>+ LinkedIn</Link></li>
+                  <li><Link aria-label='Profil Instagram' to={'https://www.instagram.com/secretariatlive/'} target='_blank' >+ Instagram</Link></li>
+                  <li><Link aria-label='Page FaceBook' to={'https://www.facebook.com/Secretariatlive'} target='_blank'>+ FaceBook</Link></li>
+                  <li><Link aria-label='Profil LinkdIn' to={'https://www.linkedin.com/in/anne-sophie-philippe-52930b211/'} target='_blank'>+ LinkedIn</Link></li>
                 </ul>
                 <ul className='email'>
                   <li onClick={handleShowMenu}><Link to={'/contact#ancre'}><strong>secretariatlive13@gmail.com</strong></Link></li>

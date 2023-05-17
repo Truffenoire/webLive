@@ -110,8 +110,8 @@ function Footer({ isCharged, setIsCharged }) {
             <div className="reseau">
                 <h3>Suivez nous</h3>
                 <ul className="iconReseau">
-                    <li><a className='instaGram' href="https://www.instagram.com/secretariatlive/"><FaInstagram /></a></li>
-                    <li><a className='faceBook' href='https://www.facebook.com/Secretariatlive'><FaFacebook /></a></li>
+                    <li><a aria-label='Profil Instagram' className='instaGram' href="https://www.instagram.com/secretariatlive/"><FaInstagram /></a></li>
+                    <li><a aria-label='Page Facebook' className='faceBook' href='https://www.facebook.com/Secretariatlive'><FaFacebook /></a></li>
                     <li><Link className='mail' to={'/contact#ancreContact'}><RiMailSendLine /></Link></li>
                 </ul>
             </div>
