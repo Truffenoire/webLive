@@ -7,7 +7,7 @@ import img2 from '../../../imgImport/2.jpg';
 import img3 from '../../../imgImport/3.jpg';
 import img4 from '../../../imgImport/4.png';
 import img5 from '../../../imgImport/5.jpg';
-import img1 from '../../../imgImport/mongol.jpg';
+import img1 from '../../../imgImport/mongol.webp';
 
 
 export default function Vignette() {

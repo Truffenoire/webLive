@@ -5,7 +5,7 @@ import { animated, useSpring, config } from '@react-spring/web';
 // import { gsap } from 'gsap'
 
 import { AiFillCloseCircle } from "react-icons/ai";
-import Logo from '../../imgImport/logoPetit.png'
+import Logo from '../../imgImport/logoPetit.webp'
 
 import Cool from '../../imgImport/Group1.svg'
 import Dead from '../../imgImport/Group3.svg'

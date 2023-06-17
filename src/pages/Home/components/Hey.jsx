@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 
 import { gsap } from "gsap"
 
-import portrait from '../../../imgImport/portraitAnne.png'
+import portrait from '../../../imgImport/portraitAnne.webp'
 
 
 export default function Hey() {

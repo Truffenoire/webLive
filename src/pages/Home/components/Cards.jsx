@@ -5,7 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 
 
-import pig from '../../../imgImport/pig.png'
+import pig from '../../../imgImport/pig.webp'
 
 export default function Cards() {
 

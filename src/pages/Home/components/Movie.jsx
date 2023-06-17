@@ -8,6 +8,7 @@ export default function Movie() {
 
   const handleMovie = () => {
     setToggleMovie(!toggleMovie)
+    console.log(toggleMovie);
   }
 
   return (

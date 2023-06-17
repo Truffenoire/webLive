@@ -9,12 +9,12 @@ import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 
 // import WhatsAppImg from '../../imgImport/WhatsAppButtonGreenLarge.svg'
 import BureauEmail from '../../imgImport/email-collage-counter.png'
-import Lettre from '../../imgImport/lettre.png'
+import Lettre from '../../imgImport/lettre.webp'
 import Letter from '../../imgImport/letter.png'
-import Timbre from '../../imgImport/timbre.png'
-import Timbre2 from '../../imgImport/timbre2.png'
-import Enveloppe from '../../imgImport/enveloppe.png'
-import Cacheté from '../../imgImport/lettreCachet.png'
+import Timbre from '../../imgImport/timbre.webp'
+import Timbre2 from '../../imgImport/timbre2.webp'
+import Enveloppe from '../../imgImport/enveloppe.webp'
+import Cacheté from '../../imgImport/lettreCachet.webp'
 
 
 
